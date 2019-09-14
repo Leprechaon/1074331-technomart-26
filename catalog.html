@@ -56,7 +56,18 @@
         <form class="left-side-filter">
           <span>Фильтр:</span>
           <h3 class="price form-names">Цена</h3>
-          <!--тут будет фильтр цены-->
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar">
+              </div>
+            </div>
+            <div class="toggle min-toggle"></div>
+            <div class="toggle max-toggle"></div>
+          </div>
+          <div class="price-controls">
+            <input class="price-min" type="text" name="price-min" value="0"><span>—</span>
+            <input class="price-max" type="text" name="price-max" value="30000">
+          </div>
           <h3 class="manufactures form-names">Производители:</h3>
           <ul>
             <li>
@@ -94,19 +105,16 @@
           <button type="submit">Показать</button>
         </form>
         <section class="right-side-container">
-          <div class="sorting">
+          <form class="sorting" action="">
             <span>Сортировка:</span>
-            <input type="radio" id="price" name="sorting-filter-1">
-            <input type="radio" id="type" name="sorting-filter-1">
-            <input type="radio" id="function" name="sorting-filter-1">
-            <label for="price">По цене</label>
-            <label for="type">По типу</label>
-            <label for="function">По фунционалу</label>
-            <input type="radio" id="grow" name="sorting-filter-2">
-            <input type="radio" id="reduce" name="sorting-filter-2">
-            <label for="grow"><img src="" alt="grow"></label>
-            <label for="reduce"><img src="" alt="reduce"></label>
-          </div>
+            <button name="price">По цене</button>
+            <button name="type">По типу</button>
+            <button name="function">По фунционалу</button>
+            <div>
+              <button name="grow"><img src="" alt="grow"></button>
+              <button name="reduce"><img src="" alt="reduce"></button>
+            </div>
+          </form>
           <ul class="catalog-items">
             <li class="item">
               <div class="item-btn">
@@ -210,13 +218,11 @@
           </div>
         </section>
       </div>
-      <div class="wrapper-about-items">
-        <div class="about-items">
-          <h2>Пара слов о перфораторах</h2>
-          <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
-            Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В<br>
-            ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
-        </div>
+      <div class="about-items">
+        <h2>Пара слов о перфораторах</h2>
+        <p>Перфоратор — универсальный строительный инструмент. Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+          Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка. В<br>
+          ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </div>
     </main>
     <footer>

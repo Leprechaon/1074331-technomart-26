@@ -44,54 +44,53 @@
     <main>
       <section class="container">
         <div class="offers">
-          <div class="category materials new">
-            <h2>Материалы</h2>
-            <a class="category-link" href="">На любой вкус</a>
-            <img src="" alt="Materials">
-            <img src="" alt="New">
-          </div>
-          <div class="category tools">
-              <h2>Инструмент</h2>
-              <a class="category-link" href="">На все случаи</a>
-              <img src="" alt="Tools">
-          </div>
-          <div class="category technic">
-              <h2>Техника</h2>
-              <a class="category-link"  href="">Для стройки</a>
-              <img src="" alt="technic">
-          </div>
-          <div class="slider">
-            <input type="radio" id="slide-1" name="toggle" checked>
-            <input type="radio" id="slide-2" name="toggle">
-            <label for="slide-1"></label>
-            <label for="slide-2"></label>
-            <div class="slides">
-              <div class="slide">
-                <h2>Перфораторы</h2>
-                <p>Настоящие мужские игрушки</p>
-                <a class="page-red-button-link" href="catalog.html">Открыть каталог</a>
-              </div>
-              <div class="slide">
-                <h2>Дрели</h2>
-                <p>Соседям на радость</p>
-                <a class="page-red-button-link" href="">Открыть каталог</a>
+          <div class="left-offers">  
+            <div class="category materials new">
+              <h2>Материалы</h2>
+              <a class="category-link" href="">На любой вкус</a>
+              <img src="" alt="New">
+            </div>
+            <div class="category tools">
+                <h2>Инструмент</h2>
+                <a class="category-link" href="">На все случаи</a>
+            </div>
+            <div class="slider">
+              <input type="radio" id="slide-1" name="toggle" checked>
+              <input type="radio" id="slide-2" name="toggle">
+              <label for="slide-1"></label>
+              <label for="slide-2"></label>
+              <div class="slides">
+                <div class="slide">
+                  <h2>Перфораторы</h2>
+                  <p>Настоящие мужские игрушки</p>
+                  <a class="page-red-button-link" href="catalog.html">Открыть каталог</a>
+                </div>
+                <div class="slide">
+                  <h2>Дрели</h2>
+                  <p>Соседям на радость</p>
+                  <a class="page-red-button-link" href="">Открыть каталог</a>
+                </div>
               </div>
             </div>
           </div>
-          <div class="category discount">
-              <h2>Скидки 50%</h2>
-              <a class="category-link" href="">На 350 товаров</a>
-              <img src="" alt="discount">
+          <div class="right-offers">
+            <div class="category technic">
+              <h2>Техника</h2>
+              <a class="category-link"  href="">Для стройки</a>
+            </div>
+            <div class="category discount">
+                <h2>Скидки 50%</h2>
+                <a class="category-link" href="">На 350 товаров</a>
+            </div>
+            <div class="category delivery">
+                <h2>Доставка</h2>
+                <a class="category-link" href="">Бесплатно</a>
+            </div>
           </div>
-          <div class="category delivery">
-              <h2>Доставка</h2>
-              <a class="category-link" href="">Бесплатно</a>
-              <img src="" alt="delivery">
+          <div class="popular-items spacing-block">
+            <h2>Популярные товары:</h2>
+            <a class="page-red-button-link" href="">Все популярные товары</a>
           </div>
-        </div>
-        <div class="popular-items">
-          <h2>Популярные товары:</h2>
-          <a class="page-red-button-link" href="">Все популярные товары</a>
         </div>
         <ul class="catalog-items">
           <li class="item">
@@ -136,19 +135,19 @@
             <p class="price">12500 р.</p>
           </li>
         </ul>
-        <div class="popular-manufactures">
+        <div class="popular-manufactures spacing-block">
           <h2>Популярные производители:</h2>
           <a class="page-red-button-link" href="">Все производители</a>
         </div>
         <div class="manufactures-banners">
-          <a href=""><img src="" alt="BOSCH"></a>
-          <a href=""><img src="" alt="Makita"></a>
-          <a href=""><img src="" alt="DeWalt"></a>
-          <a href=""><img src="" alt="Интерскол"></a>
-          <a href=""><img src="" alt="Hitachi"></a>
-          <a href=""><img src="" alt="LG"></a>
-          <a href=""><img src="" alt="AEG"></a>
-          <a href=""><img src="" alt="Metabo"></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
+          <a href=""></a>
         </div>
       </section>
       <div class="service-wrapper">
@@ -157,39 +156,37 @@
           <p>Хороший интернет-магазин отличается от плохого не только ценами!</p>
           <p>Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <input type="radio" id="service-1" name="service-toggle" checked>
-          <input type="radio" id="service-2" name="service-toggle" >
-          <input type="radio" id="service-3" name="service-toggle" >
           <label for="service-1">Доставка</label>
+          <div class="service-slide">
+            <h3>Доставка</h3>
+            <p>Мы с удовольствием доставим ваш товар прямо к<br>
+              вашему подъезду совершенно бесплатно!<br>
+              Ведь мы неплохо заработаем,<br>
+              поднимая его на ваш этаж!
+            </p>
+            <img src="" ult="delivery">
+          </div>
+          <input type="radio" id="service-2" name="service-toggle" >
           <label for="service-2">Гарантия</label>
+          <div class="service-slide">
+            <h3>Гарантия</h3>
+            <p>Если купленный у нас товар поломается или заискрит,<br>
+              а также в случае пожара, спровоцированного его возгоранием,<br>
+              вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+              сгоревший товар на новый.<br>
+              Дом уж восстановите как-нибудь сами.
+            </p>
+            <img src="" ult="warranty">
+          </div>
+          <input type="radio" id="service-3" name="service-toggle" >
           <label for="service-3">Кредит</label>
-          <div class="service-slides">
-            <div class="service-slide">
-              <h3>Доставка</h3>
-              <p>Мы с удовольствием доставим ваш товар прямо к<br>
-                 вашему подъезду совершенно бесплатно!<br>
-                 Ведь мы неплохо заработаем,<br>
-                 поднимая его на ваш этаж!
-              </p>
-              <img src="" ult="delivery">
-            </div>
-            <div class="service-slide">
-              <h3>Гарантия</h3>
-              <p>Если купленный у нас товар поломается или заискрит,<br>
-                а также в случае пожара, спровоцированного его возгоранием,<br>
-                вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
-                сгоревший товар на новый.<br>
-                Дом уж восстановите как-нибудь сами.
-              </p>
-              <img src="" ult="warranty">
-            </div>
-            <div class="service-slide">
-              <h3>Кредит</h3>
-              <p>Залезть в долговую яму стало проще!<br>
-                Кредитные консультанты придут вам на помощь.
-              </p>
-              <a class="page-red-button-link" href="">Отправить заявку</a>
-              <img src="" ult="credit">
-            </div>
+          <div class="service-slide">
+            <h3>Кредит</h3>
+            <p>Залезть в долговую яму стало проще!<br>
+              Кредитные консультанты придут вам на помощь.
+            </p>
+            <a class="page-red-button-link" href="">Отправить заявку</a>
+            <img src="" ult="credit">
           </div>
         </section>
       </div>
