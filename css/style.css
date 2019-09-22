@@ -542,6 +542,13 @@ footer {
   color: #ee3643;
   text-decoration: none;
 }
+/* ***************************  стиль popus ***************************** */
+
+.write-us,
+.big-map,
+.item-in-cart {
+  display: none;
+}
 
 /* ***************************  стиль red button ***************************** */
 
@@ -561,3 +568,4 @@ footer {
 .red-button:active {
   background-color: #ba2732;
 }
+
