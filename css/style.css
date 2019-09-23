@@ -1,3 +1,67 @@
+@font-face {
+  font-family: 'Cuprum';
+  src: url("/fonts/Cuprum-Regular.eot") format('eot'),
+  url("/fonts/Cuprum-Regular.svg") format('svg'),
+  url("/fonts/Cuprum-Regular.ttf") format('ttf'),
+  url("/fonts/Cuprum-Regular.woff") format('woff'),
+  url("/fonts/Cuprum-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: url("/fonts/Cuprum-RegularItalic.eot") format('eot'),
+  url("/fonts/Cuprum-Italic.svg") format('svg'),
+  url("/fonts/Cuprum-Italic.ttf") format('ttf'),
+  url("/fonts/Cuprum-Italic.woff") format('woff'),
+  url("/fonts/Cuprum-RegularItalic.woff2") format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cuprum';
+  src: url("/fonts/Cuprum-Bold.eot") format('eot'),
+  url("/fonts/Cuprum-Bold.svg") format('svg'),
+  url("/fonts/Cuprum-Bold.ttf") format('ttf'),
+  url("/fonts/Cuprum-Bold.woff") format('woff'),
+  url("/fonts/Cuprum-Bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'PT-sans';
+  src: url("/fonts/PTSans-Regular.eot") format('eot'),
+  url("/fonts/PTSans-Regular.svg") format('svg'),
+  url("/fonts/PTSans-Regular.ttf") format('ttf'),
+  url("/fonts/PTSans-Regular.woff") format('woff'),
+  url("/fonts/PTSans-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PT-sans';
+  src: url("/fonts/PTSans-Bold.eot") format('eot'),
+  url("/fonts/PTSans-Bold.svg") format('svg'),
+  url("/fonts/PTSans-Bold.ttf") format('ttf'),
+  url("/fonts/PTSans-Bold.woff") format('woff'),
+  url("/fonts/PTSans-Bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: bold;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+::after,
+::before {
+  box-sizing: inherit;
+} 
+
 body {
   margin: 0;
   padding: 0;
@@ -48,15 +112,59 @@ nav a {
   background-color: #293449;
 }
 
-.top input::-webkit-input-placeholder { color: #ffffff; }
+.top input::-webkit-input-placeholder {
+  color: #ffffff;
+}
 /* Firefox < 19 */
-.top input:-moz-placeholder { color: #ffffff; }
+.top input:-moz-placeholder {
+  color: #ffffff;
+}
 
 /* Firefox > 19 */
-.top input::-moz-placeholder { color: #ffffff; }
+.top input::-moz-placeholder {
+  color: #ffffff;
+}
 
 /* Internet Explorer 10 */
-.top input:-ms-input-placeholder { color: #ffffff; }
+.top input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.top input:focus::-webkit-input-placeholder {
+  color: #000000;
+}
+/* Firefox < 19 */
+.top input:focus:-moz-placeholder {
+  color: #000000;
+}
+
+/* Firefox > 19 */
+.top input:focus::-moz-placeholder {
+  color: #000000;
+}
+
+/* Internet Explorer 10 */
+.top input:focus:-ms-input-placeholder {
+  color: #000000;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {
+  display: none; width : 0; height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none; width : 0; height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
 
 .check-out {
   background-color: #63a63e;
@@ -544,9 +652,7 @@ footer {
 }
 /* ***************************  стиль popus ***************************** */
 
-.write-us,
-.big-map,
-.item-in-cart {
+.hidden {
   display: none;
 }
 
@@ -569,3 +675,15 @@ footer {
   background-color: #ba2732;
 }
 
+/* ***************************  стиль visually-hidden ***************************** */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
