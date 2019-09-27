@@ -1,54 +1,54 @@
 @font-face {
   font-family: 'Cuprum-Regular';
-  src: url("/fonts/Cuprum-Regular.eot") format('eot'),
-  url("/fonts/Cuprum-Regular.svg") format('svg'),
-  url("/fonts/Cuprum-Regular.ttf") format('ttf'),
-  url("/fonts/Cuprum-Regular.woff") format('woff'),
-  url("/fonts/Cuprum-Regular.woff2") format('woff2');
+  src: url("../fonts/Cuprum-Regular.eot") format('eot'),
+  url("../fonts/Cuprum-Regular.svg") format('svg'),
+  url("../fonts/Cuprum-Regular.ttf") format('ttf'),
+  url("../fonts/Cuprum-Regular.woff") format('woff'),
+  url("../fonts/Cuprum-Regular.woff2") format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Cuprum-Italic';
-  src: url("/fonts/Cuprum-RegularItalic.eot") format('eot'),
-  url("/fonts/Cuprum-Italic.svg") format('svg'),
-  url("/fonts/Cuprum-Italic.ttf") format('ttf'),
-  url("/fonts/Cuprum-Italic.woff") format('woff'),
-  url("/fonts/Cuprum-RegularItalic.woff2") format('woff2');
+  src: url("../fonts/Cuprum-Italic.eot") format('eot'),
+  url("../fonts/Cuprum-Italic.svg") format('svg'),
+  url("../fonts/Cuprum-Italic.ttf") format('ttf'),
+  url("../fonts/Cuprum-Italic.woff") format('woff'),
+  url("../fonts/Cuprum-Italic.woff2") format('woff2');
   font-weight: 400;
   font-style: italic;
 }
 
 @font-face {
   font-family: 'Cuprum-Bold';
-  src: url("/fonts/Cuprum-Bold.eot") format('eot'),
-  url("/fonts/Cuprum-Bold.svg") format('svg'),
-  url("/fonts/Cuprum-Bold.ttf") format('ttf'),
-  url("/fonts/Cuprum-Bold.woff") format('woff'),
-  url("/fonts/Cuprum-Bold.woff2") format('woff2');
+  src: url("../fonts/Cuprum-Bold.eot") format('eot'),
+  url("../fonts/Cuprum-Bold.svg") format('svg'),
+  url("../fonts/Cuprum-Bold.ttf") format('ttf'),
+  url("../fonts/Cuprum-Bold.woff") format('woff'),
+  url("../fonts/Cuprum-Bold.woff2") format('woff2');
   font-weight: 700;
   font-style: bold;
 }
 
 @font-face {
-  font-family: 'PT-Sans-Regular';
-  src: url("/fonts/PTSans-Regular.eot") format('eot'),
-  url("/fonts/PTSans-Regular.svg") format('svg'),
-  url("/fonts/PTSans-Regular.ttf") format('ttf'),
-  url("/fonts/PTSans-Regular.woff") format('woff'),
-  url("/fonts/PTSans-Regular.woff2") format('woff2');
+  font-family: 'PTSans-Regular';
+  src: url("../fonts/PTSans-Regular.eot") format('eot'),
+  url("../fonts/PTSans-Regular.svg") format('svg'),
+  url("../fonts/PTSans-Regular.ttf") format('ttf'),
+  url("../fonts/PTSans-Regular.woff") format('woff'),
+  url("../fonts/PTSans-Regular.woff2") format('woff2');
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'PT-Sans-Bold';
-  src: url("/fonts/PTSans-Bold.eot") format('eot'),
-  url("/fonts/PTSans-Bold.svg") format('svg'),
-  url("/fonts/PTSans-Bold.ttf") format('ttf'),
-  url("/fonts/PTSans-Bold.woff") format('woff'),
-  url("/fonts/PTSans-Bold.woff2") format('woff2');
+  font-family: 'PTSans-Bold';
+  src: url("../fonts/PTSans-Bold.eot") format('eot'),
+  url("../fonts/PTSans-Bold.svg") format('svg'),
+  url("../fonts/PTSans-Bold.ttf") format('ttf'),
+  url("../fonts/PTSans-Bold.woff") format('woff'),
+  url("../fonts/PTSans-Bold.woff2") format('woff2');
   font-weight: 700;
   font-style: bold;
 }
@@ -63,7 +63,6 @@ html {
 } 
 
 body {
-  margin: 0;
   padding: 0;
   font-family: 'Cuprum-Regular', Tahoma, Arial, sans-serif;
   font-size: 16px;
@@ -71,6 +70,10 @@ body {
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
+}
+
+.list-items {
+  list-style: none;
 }
 
 header {
@@ -81,10 +84,8 @@ header {
   background-color: #293449;
 }
 
-.top,
-.middle,
-nav {
-  display: block;
+.header-block {
+  margin: 0 auto;
   width: 940px;
 }
 
@@ -93,8 +94,7 @@ nav {
   line-height: 24px;
 }
 
-.header-links,
-.redirect {
+.header-link {
   color: #ffffff;
   text-decoration: none;
 }
@@ -105,44 +105,58 @@ nav {
   background-color: #ee3643;
 }
 
-.search {
+.form-search__input {
   border: none;
   background-color: #293449;
 }
 
-.search::-webkit-input-placeholder {
+.form-search__input::-webkit-input-placeholder {
   color: #ffffff;
 }
+
 /* Firefox < 19 */
-.search:-moz-placeholder {
+.form-search__input:-moz-placeholder {
   color: #ffffff;
 }
 
 /* Firefox > 19 */
-.search::-moz-placeholder {
+.form-search__input::-moz-placeholder {
   color: #ffffff;
 }
 
 /* Internet Explorer 10 */
-.search:-ms-input-placeholder {
+.form-search__input:-ms-input-placeholder {
   color: #ffffff;
 }
 
-.search:focus::-webkit-input-placeholder {
+.form-search__input:hover {
+  background-color: #212a3a;
+}
+
+.form-search__input:hover + svg path {
+  fill: #ffffff;
+}
+
+.form-search__input:focus {
+  outline: none;
+}
+
+.form-search__input:focus::-webkit-input-placeholder {
   color: #000000;
 }
+
 /* Firefox < 19 */
-.search:focus:-moz-placeholder {
+.form-search__input:focus:-moz-placeholder {
   color: #000000;
 }
 
 /* Firefox > 19 */
-.search:focus::-moz-placeholder {
+.form-search__input:focus::-moz-placeholder {
   color: #000000;
 }
 
 /* Internet Explorer 10 */
-.search:focus:-ms-input-placeholder {
+.form-search__input:focus:-ms-input-placeholder {
   color: #000000;
 }
 
@@ -168,74 +182,70 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 
-.check-out {
-  background-color: #63a63e;
-}
+
 
 .logo:hover {
   background-color: #ca2c37;
-}
-
-.search:hover,
-.bookmark:hover,
-.cart:hover {
-  background-color: #212a3a;
-}
-
-.check-out:hover {
-  background-color: #5fbb2d;
-}
-
-.search:hover + svg path,
-.bookmark:hover path,
-.cart:hover circle,
-.cart:hover path {
-  fill: #ffffff;
 }
 
 .logo:active {
   background-color: #ba2732;
 }
 
-.bookmark:active path,
-.cart:active circle,
-.cart:active path {
+.top-element:hover {
+  background-color: #212a3a;
+}
+
+.top-element:hover path,
+.top-element:hover circle {
+  fill: #ffffff;
+}
+
+.top-element:active path,
+.top-element:active circle {
   fill: #8b8e94;
 }
 
-.bookmark:active,
-.cart:active,
-.check-out:active {
+.header-link:active {
   color: #8b8e94;
 }
 
-.check-out:active {
+.checkout {
+  background-color: #63a63e;
+}
+
+.checkout:hover {
+  background-color: #5fbb2d;
+}
+
+.checkout:active {
   background-color: #518534;
 }
 
-.search:focus {
+.form-search__input:focus {
   background-color: #ffffff;
 }
 
-.search:focus + svg path {
+.form-search__input:focus + svg path {
   fill: #ee3643;
 }
 
 /* ***************************  стили header middle ***************************** */
 
 h1 {
+  font-family: 'Cuprum-Italic', sans-serif;
   font-style: italic;
   font-size: 16px;
   line-height: 24px;
   color: #ee3643;
 }
 
-.telephone,
-.adress {
+.phone,
+.address {
   text-decoration: none;
 }
 
-.telephone {
+.phone {
   display: block;
 
   font-size: 21px;
@@ -245,13 +255,13 @@ h1 {
   border: 3px solid #ffffff;
 }
 
-.adress {
+.address {
   font-size: 14px;
   line-height: 20px;
   color: #32425c;
 }
 
-.entrance {
+.entrance-link {
   font-size: 21px;
   line-height: 30px;
   color: #000000;
@@ -259,18 +269,19 @@ h1 {
 
   background-color: #ffffff;
 }
-.entrance:hover {
+.entrance-link:hover {
   color: #ee3643;
 }
 
-.entrance:hover path{
+.entrance-link:hover path{
   fill: #32425c;
 }
 
-.entrance:active {
+.entrance-link:active {
   color: rgba(0, 0, 0, 0.3);
 }
-.entrance:active path {
+
+.entrance-link:active path {
   fill: #c5c5c5;
 }
 
@@ -283,31 +294,21 @@ h1 {
   background-color: #ffffff;
 }
 
-.links {
-  color: #32425c;
-}
-
-.my-links {
-  font-size: 16px;
-  line-height: 24px;
-  color: inherit;
-}
-
-.my-orders {
-  list-style: none;
-}
-
 .exit:hover g,
 .exit:hover path {
   fill: #32425c;
 }
 
-.my-links:hover {
-  color: #ee3643;
-}
-
 .exit:active {
   opacity: 0.3;
+}
+
+.my-links {
+  color: #32425c;;
+}
+
+.my-links:hover {
+  color: #ee3643;
 }
 
 .my-links:active {
@@ -317,10 +318,15 @@ h1 {
 
 /* ***************************  стили header навигация ***************************** */
 
-nav {
+.main-nav {
   font-size: 17px;
   line-height: 24px;
   background-color: #32425c;
+}
+
+.redirect {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .redirect:hover {
@@ -350,8 +356,7 @@ nav {
   font-family: 'PT-Sans-Regular', sans-serif;
 }
 
-.info li {
-  list-style: none;
+.info{
   font-size: 18px;
   line-height: 26px;
 }
@@ -368,9 +373,7 @@ nav {
   font-family: 'PT-Sans-Regular', sans-serif;
 }
 
-.breadcrumbs,
 .crumbs {
-  list-style: none;
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
@@ -387,17 +390,14 @@ nav {
 
 /* ***************************  стили left side filter ***************************** */
 
-.form-title,
-.range-controls,
-.price-toggle,
-.sorting {
+.form-element {
   text-transform: uppercase;
   background-color: #f7f3ec;
 }
 
 .form-names {
   font-size: 17px;
-  font-family: 'PT-Sans-Bold', sans-serif;
+  font-family: 'PTSans-Bold', sans-serif;
   line-height: 24px;
   text-transform: uppercase;
 }
@@ -408,13 +408,7 @@ nav {
   text-align: center;
 }
 
-.brend-list,
-.type-list {
-  list-style: none;
-}
-
-.brend,
-.type {
+.filter-list-item {
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
@@ -429,7 +423,13 @@ nav {
   
   background-color: #ffffff;
 }
+
 /* ***************************  стили right side container ***************************** */
+
+.sorting {
+  text-transform: uppercase;
+  background-color: #f7f3ec;
+}
 
 .sort {
   border: none;
@@ -439,23 +439,10 @@ nav {
   background: none;
 }
 
-.arrow {
-  border: none;
-  background: none;
-  opacity: 0.3;
-}
-
 .sort:hover {
   border: none;
   border-bottom: 1px solid #ee3643;
   color: rgba(0, 0, 0, 1);
-}
-
-.arrow:hover {
-  opacity: 1;
-}
-.arrow:hover path {
-  fill: #231F20;
 }
 
 .active-sort, 
@@ -465,20 +452,31 @@ nav {
   opacity: 1;
 }
 
+.arrow {
+  border: none;
+  background: none;
+  opacity: 0.3;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.arrow:hover path {
+  fill: #231F20;
+}
+
 .active-sort path,
 .arrow:active path {
   fill: #ee3643;
 }
 
 /* ***************************  стили catalog-items ***************************** */
-.catalog-items {
-  list-style: none;
-}
 
 .item-info {
   font-size: 18px;
   line-height: 26px;
-  font-family: 'PT-Sans-Bold', sans-serif;
+  font-family: 'PTSans-Bold', sans-serif;
   text-align: center;
 }
 
@@ -495,18 +493,17 @@ nav {
   background-color: #63a63e;
 }
 
+.to-buy:hover {
+  background-color: #5fbb2d;
+}
+
+.to-buy:active {
+  background-color: #518534;
+}
+
 .to-buy circle,
 .to-buy path {
   opacity: 0.3;
-}
-
-.to-bookmark {
-  color: #32425c;
-  border: 3px solid #63a63e;
-} 
-
-.to-buy:hover {
-  background-color: #5fbb2d;
 }
 
 .to-buy:hover circle,
@@ -514,23 +511,23 @@ nav {
   opacity: 1;
 }
 
+.to-bookmark {
+  color: #32425c;
+  border: 3px solid #63a63e;
+} 
+
 .to-bookmark:hover {
   border-color: #32425c;
 } 
-
-.to-buy:active {
-  background-color: #518534;
-}
 
 .to-bookmark:active {
   opacity: 0.3;
 } 
 
-.item-old-price,
-.item-price {
+.price-list {
   font-size: 17px;
   line-height: 24px;
-  font-family: 'PT-Sans-Bold', sans-serif;
+  font-family: 'PTSans-Bold', sans-serif;
 }
 
 .item-old-price {
@@ -540,10 +537,8 @@ nav {
 
 .item-price {
   color: #ffffff;
-  
-  background-color: #999999;
-  background-image: url("/img/red-button.svg");
-  background-repeat: repeat;
+  background-image: url("../img/red-button.svg");
+  background-repeat: no-repeat;
   background-position: 0 0;
 }
 
@@ -571,6 +566,7 @@ nav {
   color: #ffffff;
   background-color: #ee3643;
 }
+
 /* ***************************  стили about-items ***************************** */
 
 .about-items {
@@ -597,15 +593,7 @@ footer {
   background-color: #ee3643;
 }
 
-.footer-navigation-1,
-.footer-navigation-2 {
-  list-style: none;
-}
-
-.navigation-1,
-.footer-adress,
-.footer-telephone,
-.navigation-2 {
+.footer-link {
   font-size: 18px;
   line-height: 26px;
   text-decoration: none;
@@ -616,15 +604,11 @@ footer {
   color: #ffd180;
 }
 
-.navigation-1:hover,
-.navigation-2:hover,
-.feedback:hover,
-.developed:hover {
+.footer-nav:hover {
   text-decoration: underline;
 }
 
-.navigation-1:active,
-.navigation-2:active {
+.footer-nav:active {
   text-decoration: none;
   opacity: 0.5;
 }
@@ -633,10 +617,6 @@ footer {
   font-size: 16px;
   line-height: 24px;
   color: #ffffff;
-}
-
-.social {
-  list-style: none;
 }
 
 .social-btn {
@@ -653,15 +633,16 @@ footer {
   text-decoration: none;
 }
 
+.coupling:hover {
+  text-decoration: underline;
+}
+
 .coupling:active {
   color: #ee3643;
   text-decoration: none;
 }
-/* ***************************  стиль popus ***************************** */
 
-.hidden {
-  display: none;
-}
+/* ***************************  стиль popus ***************************** */
 
 /* ***************************  стиль red button ***************************** */
 
