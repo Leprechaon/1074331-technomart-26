@@ -84,7 +84,7 @@ header {
   background-color: #293449;
 }
 
-.header-block {
+.center-block {
   margin: 0 auto;
   width: 940px;
 }
@@ -611,6 +611,10 @@ footer {
 .footer-nav:active {
   text-decoration: none;
   opacity: 0.5;
+}
+
+.footer-bottom-wrapper {
+  background-color: #293449;
 }
 
 .footer-bottom {
