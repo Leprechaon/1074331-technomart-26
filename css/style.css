@@ -1,0 +1,681 @@
+@font-face {
+  font-family: 'Cuprum-Regular';
+  src: url("../fonts/Cuprum-Regular.eot") format('eot'),
+  url("../fonts/Cuprum-Regular.svg") format('svg'),
+  url("../fonts/Cuprum-Regular.ttf") format('ttf'),
+  url("../fonts/Cuprum-Regular.woff") format('woff'),
+  url("../fonts/Cuprum-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Cuprum-Italic';
+  src: url("../fonts/Cuprum-Italic.eot") format('eot'),
+  url("../fonts/Cuprum-Italic.svg") format('svg'),
+  url("../fonts/Cuprum-Italic.ttf") format('ttf'),
+  url("../fonts/Cuprum-Italic.woff") format('woff'),
+  url("../fonts/Cuprum-Italic.woff2") format('woff2');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Cuprum-Bold';
+  src: url("../fonts/Cuprum-Bold.eot") format('eot'),
+  url("../fonts/Cuprum-Bold.svg") format('svg'),
+  url("../fonts/Cuprum-Bold.ttf") format('ttf'),
+  url("../fonts/Cuprum-Bold.woff") format('woff'),
+  url("../fonts/Cuprum-Bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'PTSans-Regular';
+  src: url("../fonts/PTSans-Regular.eot") format('eot'),
+  url("../fonts/PTSans-Regular.svg") format('svg'),
+  url("../fonts/PTSans-Regular.ttf") format('ttf'),
+  url("../fonts/PTSans-Regular.woff") format('woff'),
+  url("../fonts/PTSans-Regular.woff2") format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'PTSans-Bold';
+  src: url("../fonts/PTSans-Bold.eot") format('eot'),
+  url("../fonts/PTSans-Bold.svg") format('svg'),
+  url("../fonts/PTSans-Bold.ttf") format('ttf'),
+  url("../fonts/PTSans-Bold.woff") format('woff'),
+  url("../fonts/PTSans-Bold.woff2") format('woff2');
+  font-weight: 700;
+  font-style: bold;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+::after,
+::before {
+  box-sizing: inherit;
+} 
+
+body {
+  padding: 0;
+  font-family: 'Cuprum-Regular', Tahoma, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.list-items {
+  list-style: none;
+}
+
+header {
+  background-color: #f3f7f9;
+}
+
+.top-wrapper {
+  background-color: #293449;
+}
+
+.center-block {
+  margin: 0 auto;
+  width: 940px;
+}
+
+.top {
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.header-link {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ***************************  стили header top ***************************** */
+
+.logo {
+  background-color: #ee3643;
+}
+
+.form-search__input {
+  border: none;
+  background-color: #293449;
+}
+
+.form-search__input::-webkit-input-placeholder {
+  color: #ffffff;
+}
+
+/* Firefox < 19 */
+.form-search__input:-moz-placeholder {
+  color: #ffffff;
+}
+
+/* Firefox > 19 */
+.form-search__input::-moz-placeholder {
+  color: #ffffff;
+}
+
+/* Internet Explorer 10 */
+.form-search__input:-ms-input-placeholder {
+  color: #ffffff;
+}
+
+.form-search__input:hover {
+  background-color: #212a3a;
+}
+
+.form-search__input:hover + svg path {
+  fill: #ffffff;
+}
+
+.form-search__input:focus {
+  outline: none;
+}
+
+.form-search__input:focus::-webkit-input-placeholder {
+  color: #000000;
+}
+
+/* Firefox < 19 */
+.form-search__input:focus:-moz-placeholder {
+  color: #000000;
+}
+
+/* Firefox > 19 */
+.form-search__input:focus::-moz-placeholder {
+  color: #000000;
+}
+
+/* Internet Explorer 10 */
+.form-search__input:focus:-ms-input-placeholder {
+  color: #000000;
+}
+
+/* clears the 'X' from Internet Explorer */
+input[type=search]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* clears the 'X' from Chrome */
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+
+
+
+.logo:hover {
+  background-color: #ca2c37;
+}
+
+.logo:active {
+  background-color: #ba2732;
+}
+
+.top-element:hover {
+  background-color: #212a3a;
+}
+
+.top-element:hover path,
+.top-element:hover circle {
+  fill: #ffffff;
+}
+
+.top-element:active path,
+.top-element:active circle {
+  fill: #8b8e94;
+}
+
+.header-link:active {
+  color: #8b8e94;
+}
+
+.checkout {
+  background-color: #63a63e;
+}
+
+.checkout:hover {
+  background-color: #5fbb2d;
+}
+
+.checkout:active {
+  background-color: #518534;
+}
+
+.form-search__input:focus {
+  background-color: #ffffff;
+}
+
+.form-search__input:focus + svg path {
+  fill: #ee3643;
+}
+
+/* ***************************  стили header middle ***************************** */
+
+h1 {
+  font-family: 'Cuprum-Italic', sans-serif;
+  font-style: italic;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ee3643;
+}
+
+.phone,
+.address {
+  text-decoration: none;
+}
+
+.phone {
+  display: block;
+
+  font-size: 21px;
+  line-height: 30px;
+  color: #ee3643;
+
+  border: 3px solid #ffffff;
+}
+
+.address {
+  font-size: 14px;
+  line-height: 20px;
+  color: #32425c;
+}
+
+.entrance-link {
+  font-size: 21px;
+  line-height: 30px;
+  color: #000000;
+  text-decoration: none;
+
+  background-color: #ffffff;
+}
+.entrance-link:hover {
+  color: #ee3643;
+}
+
+.entrance-link:hover path{
+  fill: #32425c;
+}
+
+.entrance-link:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.entrance-link:active path {
+  fill: #c5c5c5;
+}
+
+.exit {
+  color: #000000;
+  font-size: 21px;
+  line-height: 30px;
+  text-decoration: none;
+
+  background-color: #ffffff;
+}
+
+.exit:hover g,
+.exit:hover path {
+  fill: #32425c;
+}
+
+.exit:active {
+  opacity: 0.3;
+}
+
+.my-links {
+  color: #32425c;;
+}
+
+.my-links:hover {
+  color: #ee3643;
+}
+
+.my-links:active {
+  color: #32425c;
+  opacity: 0.3;
+}
+
+/* ***************************  стили header навигация ***************************** */
+
+.main-nav {
+  font-size: 17px;
+  line-height: 24px;
+  background-color: #32425c;
+}
+
+.redirect {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.redirect:hover {
+  background-color: #293449;
+}
+
+.redirect:active {
+  opacity: 0.5;
+  background-color: #1d2739;
+}
+
+/* ***************************  стили offers ***************************** */
+/* ***************************  стили catalog-items ***************************** */
+/* ***************************  стили popular-manufactures ***************************** */
+/* ***************************  стили services ***************************** */
+/* ***************************  стили about-us ***************************** */
+
+.about-us h2 {
+  font-size: 30px;
+  line-height: 44px;
+  text-transform: uppercase;
+}
+
+.about-us p {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: 'PT-Sans-Regular', sans-serif;
+}
+
+.info{
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.small-map {
+  background-color: #8b8e94;
+}
+
+
+/* ***************************  стили catalog ***************************** */
+.inner-page {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: 'PT-Sans-Regular', sans-serif;
+}
+
+.crumbs {
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: 30px;
+  line-height: 44px;
+  font-family: 'Cuprum-Regular', sans-serif;
+  color: #32425c;
+  text-transform: uppercase;
+  background-color: #f2f6f8;
+}
+
+/* ***************************  стили left side filter ***************************** */
+
+.form-element {
+  text-transform: uppercase;
+  background-color: #f7f3ec;
+}
+
+.form-names {
+  font-size: 17px;
+  font-family: 'PTSans-Bold', sans-serif;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.price-toggle {
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.filter-list-item {
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.view-button {
+  border: 1px solid #e5e5e5;
+  
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  
+  background-color: #ffffff;
+}
+
+/* ***************************  стили right side container ***************************** */
+
+.sorting {
+  text-transform: uppercase;
+  background-color: #f7f3ec;
+}
+
+.sort {
+  border: none;
+  border-bottom: 1px dotted #ee3643;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.3);
+  background: none;
+}
+
+.sort:hover {
+  border: none;
+  border-bottom: 1px solid #ee3643;
+  color: rgba(0, 0, 0, 1);
+}
+
+.active-sort, 
+.sort:active {
+  color: #ee3643;
+  border: none;
+  opacity: 1;
+}
+
+.arrow {
+  border: none;
+  background: none;
+  opacity: 0.3;
+}
+
+.arrow:hover {
+  opacity: 1;
+}
+
+.arrow:hover path {
+  fill: #231F20;
+}
+
+.active-sort path,
+.arrow:active path {
+  fill: #ee3643;
+}
+
+/* ***************************  стили catalog-items ***************************** */
+
+.item-info {
+  font-size: 18px;
+  line-height: 26px;
+  font-family: 'PTSans-Bold', sans-serif;
+  text-align: center;
+}
+
+.item-btn a {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: 'Cuprum-Regular', sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.to-buy {
+  color: #ffffff;
+  background-color: #63a63e;
+}
+
+.to-buy:hover {
+  background-color: #5fbb2d;
+}
+
+.to-buy:active {
+  background-color: #518534;
+}
+
+.to-buy circle,
+.to-buy path {
+  opacity: 0.3;
+}
+
+.to-buy:hover circle,
+.to-buy:hover path {
+  opacity: 1;
+}
+
+.to-bookmark {
+  color: #32425c;
+  border: 3px solid #63a63e;
+} 
+
+.to-bookmark:hover {
+  border-color: #32425c;
+} 
+
+.to-bookmark:active {
+  opacity: 0.3;
+} 
+
+.price-list {
+  font-size: 17px;
+  line-height: 24px;
+  font-family: 'PTSans-Bold', sans-serif;
+}
+
+.item-old-price {
+  color: #999999;
+  text-decoration: line-through;
+}
+
+.item-price {
+  color: #ffffff;
+  background-image: url("../img/red-button.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.square-btn {
+  border: 1px solid #e5e5e5;
+  color: #000000;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.square-btn:hover {
+  border-color: #bdc6ca;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.square-btn:active {
+  border-color: #ee3643;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.catalog-btn-active {
+  border-color: #ee3643;
+  color: #ffffff;
+  background-color: #ee3643;
+}
+
+/* ***************************  стили about-items ***************************** */
+
+.about-items {
+  background-color: #f2f6f8;
+}
+
+.about-items h2 {
+  font-size: 30px;
+  line-height: 44px;
+  font-family: 'Cuprum-Regular', sans-serif;
+  text-transform: uppercase;
+}
+
+.about-items p {
+  line-height: 24px;
+}
+
+/* ***************************  стили footer ***************************** */
+footer {
+  background-color: #32425c;
+}
+
+.footer-logo {
+  background-color: #ee3643;
+}
+
+.footer-link {
+  font-size: 18px;
+  line-height: 26px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navigation-2 {
+  color: #ffd180;
+}
+
+.footer-nav:hover {
+  text-decoration: underline;
+}
+
+.footer-nav:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.footer-bottom-wrapper {
+  background-color: #293449;
+}
+
+.footer-bottom {
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.social-btn {
+  background-color: #212a3a;
+}
+
+.social-btn:hover,
+.social-btn:active {
+  background-color: #ee3643;
+}
+
+.coupling {
+  color: #ffd180;
+  text-decoration: none;
+}
+
+.coupling:hover {
+  text-decoration: underline;
+}
+
+.coupling:active {
+  color: #ee3643;
+  text-decoration: none;
+}
+
+/* ***************************  стиль popus ***************************** */
+
+/* ***************************  стиль red button ***************************** */
+
+.red-button {
+  font-size: 14px;
+  line-height: 20px;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #ee3643;
+}
+
+.red-button:hover {
+  background-color: #ca2c37;
+}
+
+.red-button:active {
+  background-color: #ba2732;
+}
+
+/* ***************************  стиль visually-hidden ***************************** */
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0px;
+  padding: 0px;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
