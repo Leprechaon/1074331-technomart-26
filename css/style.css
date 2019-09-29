@@ -66,7 +66,7 @@ body {
   padding: 0;
   font-family: 'Cuprum-Regular', Tahoma, Arial, sans-serif;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 1.5;
   font-weight: 400;
   color: #000000;
   background-color: #ffffff;
@@ -74,6 +74,18 @@ body {
 
 .list-items {
   list-style: none;
+}
+
+.section-title {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-family: 'Cuprum-Regular', Tahoma, Arial, sans-serif;
+}
+
+.simple-text {
+  font-size: 13px;
+  line-height: 24px;
+  font-family: 'PTSans-Regular', Tahoma, Arial, sans-serif;
 }
 
 header {
@@ -180,9 +192,6 @@ input[type=search]::-webkit-search-results-button,
 input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
-
-
-
 
 .logo:hover {
   background-color: #ca2c37;
@@ -339,24 +348,176 @@ h1 {
 }
 
 /* ***************************  стили offers ***************************** */
+
+.category-title {
+  font-size: 24px;
+  font-family: 'Cuprum-Bold', sans-serif;
+  color: #ffffff;
+}
+
+.category-link {
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1)
+}
+
+.category-link:hover {
+  background-color: rgba(255, 255, 255, 0.2)
+}
+
+.category-link:active {
+  background-color: rgba(255, 255, 255, 0.3)
+}
+
+.materials {
+  background-color: #ffbf47;
+  background-image: url(../img/icon-1.svg);
+  background-repeat: no-repeat;
+  background-position: 200px;
+}
+
+.tools {
+  background-color: #3bbce3;
+  background-image: url(../img/icon-2.svg);
+  background-repeat: no-repeat;
+  background-position: 200px;
+}
+
+.technic {
+  background-color: #dc91d8;
+  background-image: url(../img/icon-3.svg);
+  background-repeat: no-repeat;
+  background-position: 200px;
+}
+
+.discount {
+  background-color: #8ed78f;
+  background-image: url(../img/icon-4.svg);
+  background-repeat: no-repeat;
+  background-position: 200px;
+}
+
+.delivery {
+  background-color: #ffc047;
+  background-image: url(../img/icon-5.svg);
+  background-repeat: no-repeat;
+  background-position: 200px;
+}
+
+.slider {
+  background-color: #8b8e94;
+}
+
+.slide h2 {
+  font-size: 36px;
+  font-family: 'Cuprum-Bold', sans-serif;
+  color: #ffffff;
+}
+
+.slide p {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.slide-1 {
+  background-image: url("../img/slide-1.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.slide-2 {
+  background-image: url("../img/slide-2.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
 /* ***************************  стили catalog-items ***************************** */
+
+.spacing-block {
+  background-color: #f9f5f0;
+}
+
+.spacing-block h2 {
+  color: #32425c;
+}
+
 /* ***************************  стили popular-manufactures ***************************** */
+
+.banner-link {
+  display: inline-flex;
+  width: 220px;
+  height: 145px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border: 1px solid #eaeaea;
+}
+
+.bosch {
+  background-image: url(../img/bosch.png);
+}
+
+.makita {
+  background-image: url(../img/Makita.png);
+}
+
+.dewalt {
+  background-image: url(../img/DeWALT.png);
+}
+
+.interskol {
+  background-image: url(../img/interskol.png);
+}
+
+.hitachi {
+  background-image: url(../img/Hitachi.png);
+}
+
+.lg {
+  background-image: url(../img/LG.png);
+}
+
+.aeg {
+  background-image: url(../img/AEG.png);
+}
+
+.metabo {
+  background-image: url(../img/Metabo.png);
+}
+
 /* ***************************  стили services ***************************** */
+
+.services-wrapper {
+  background-color: #f4f7f9;
+}
+
+.service-toggle {
+  font-size: 21px;
+  font-family: 'Cuprum-Bold', Tahoma, Arial, sans-serif;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #32425c;
+}
+
+.service-toggle:hover {
+  background-color: #293449;
+}
+
+.service-input:checked + .service-toggle {
+  color: #32425c;
+  background-color: #ffffff;
+}
+
+.service-slide h3 {
+  font-size: 36px;
+  color: #32425c;
+  line-height: 1.5;
+}
+
 /* ***************************  стили about-us ***************************** */
 
-.about-us h2 {
-  font-size: 30px;
-  line-height: 44px;
-  text-transform: uppercase;
-}
-
-.about-us p {
-  font-size: 13px;
-  line-height: 24px;
-  font-family: 'PT-Sans-Regular', sans-serif;
-}
-
-.info{
+.transport-list{
   font-size: 18px;
   line-height: 26px;
 }
@@ -369,8 +530,7 @@ h1 {
 /* ***************************  стили catalog ***************************** */
 .inner-page {
   font-size: 13px;
-  line-height: 18px;
-  font-family: 'PT-Sans-Regular', sans-serif;
+  font-family: 'PTSans-Regular', sans-serif;
 }
 
 .crumbs {
@@ -379,12 +539,8 @@ h1 {
   text-transform: uppercase;
 }
 
-.section-title {
-  font-size: 30px;
-  line-height: 44px;
-  font-family: 'Cuprum-Regular', sans-serif;
+.catalog-title {
   color: #32425c;
-  text-transform: uppercase;
   background-color: #f2f6f8;
 }
 
@@ -571,13 +727,6 @@ h1 {
 
 .about-items {
   background-color: #f2f6f8;
-}
-
-.about-items h2 {
-  font-size: 30px;
-  line-height: 44px;
-  font-family: 'Cuprum-Regular', sans-serif;
-  text-transform: uppercase;
 }
 
 .about-items p {
