@@ -96,6 +96,8 @@ body {
 /* ***************************  стили header ***************************** */
 
 header {
+  display: flex;
+  flex-direction: column;  
   background-color: #f3f7f9;
 }
 
@@ -104,8 +106,11 @@ header {
 }
 
 .top {
+  display: flex;
+  align-items: center;
   font-size: 17px;
   line-height: 24px;
+  min-height: 42px;
 }
 
 .header-link {
@@ -117,11 +122,42 @@ header {
 
 .logo {
   background-color: #ee3643;
+  min-width: 220px;
+  text-align: center;
+  padding: 9px;
+}
+
+.logo:hover {
+  background-color: #ca2c37;
+}
+
+.logo:active {
+  background-color: #ba2732;
 }
 
 .form-search__input {
+  position: relative;
   border: none;
   background-color: #293449;
+  min-width: 270px;
+  padding-left: 49px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+.form-search__input::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 14px;
+  height: 16px;
+  background-image: url("../img/icon-search.svg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: #293449;
+  background-size: contain;
 }
 
 .form-search__input::-webkit-input-placeholder {
@@ -191,12 +227,10 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
-.logo:hover {
-  background-color: #ca2c37;
-}
-
-.logo:active {
-  background-color: #ba2732;
+.search-svg {
+  padding-left: 17px;
+  position: absolute;
+  top: 12px;
 }
 
 .top-element:hover {
