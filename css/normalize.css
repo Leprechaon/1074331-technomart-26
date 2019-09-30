@@ -347,3 +347,14 @@ template {
 [hidden] {
   display: none;
 }
+
+/**
+ * Add a pointer to all interactive elements.
+ */
+
+a:hover,
+input:hover,
+label:hover,
+button:hover {
+  cursor: pointer;
+}

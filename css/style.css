@@ -93,17 +93,6 @@ body {
   width: 940px;
 }
 
-a:hover,
-input:hover,
-label:hover,
-button:hover {
-  cursor: pointer;
-}
-
-:focus {
-  outline: none;
-}
-
 /* ***************************  стили header ***************************** */
 
 header {
@@ -242,6 +231,7 @@ input[type=search]::-webkit-search-results-decoration {
 
 .form-search__input:focus {
   background-color: #ffffff;
+  outline: none;
 }
 
 .form-search__input:focus + svg path {
@@ -580,6 +570,7 @@ h1 {
   font-size: 17px;
   line-height: 24px;
   text-align: center;
+  outline: none;
 }
 
 .filter-list-item {
@@ -626,6 +617,10 @@ h1 {
   opacity: 1;
 }
 
+.sort:focus {
+  outline: none;
+}
+
 .arrow {
   border: none;
   background: none;
@@ -644,6 +639,10 @@ h1 {
 .active-sort path,
 .arrow:active path {
   fill: #ee3643;
+}
+
+.arrow:focus {
+  outline: none;
 }
 
 /* ***************************  стили catalog-items ***************************** */
