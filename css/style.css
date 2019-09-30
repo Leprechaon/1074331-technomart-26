@@ -88,17 +88,30 @@ body {
   font-family: 'PTSans-Regular', Tahoma, Arial, sans-serif;
 }
 
+.center-block {
+  margin: 0 auto;
+  width: 940px;
+}
+
+a:hover,
+input:hover,
+label:hover,
+button:hover {
+  cursor: pointer;
+}
+
+:focus {
+  outline: none;
+}
+
+/* ***************************  стили header ***************************** */
+
 header {
   background-color: #f3f7f9;
 }
 
 .top-wrapper {
   background-color: #293449;
-}
-
-.center-block {
-  margin: 0 auto;
-  width: 940px;
 }
 
 .top {
@@ -147,10 +160,6 @@ header {
 
 .form-search__input:hover + svg path {
   fill: #ffffff;
-}
-
-.form-search__input:focus {
-  outline: none;
 }
 
 .form-search__input:focus::-webkit-input-placeholder {
@@ -445,13 +454,19 @@ h1 {
 
 /* ***************************  стили popular-manufactures ***************************** */
 
+.manufactures-banners {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .banner-link {
-  display: inline-flex;
-  width: 220px;
-  height: 145px;
+  width: 218px;
+  height: 143px;
   background-position: center center;
   background-repeat: no-repeat;
   border: 1px solid #eaeaea;
+  margin-top: 20px;
 }
 
 .bosch {
@@ -524,6 +539,9 @@ h1 {
 
 .small-map {
   background-color: #8b8e94;
+  display: block;
+  width: 300px;
+  height: 158px;
 }
 
 
@@ -614,6 +632,7 @@ h1 {
   opacity: 0.3;
 }
 
+.active-sort,
 .arrow:hover {
   opacity: 1;
 }
