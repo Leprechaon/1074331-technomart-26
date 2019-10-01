@@ -78,8 +78,11 @@ body {
 
 .section-title {
   font-size: 30px;
+  font-weight: 400;
   text-transform: uppercase;
   font-family: 'Cuprum-Regular', Tahoma, Arial, sans-serif;
+  margin: 0;
+  margin-bottom: 24px;
 }
 
 .simple-text {
@@ -677,9 +680,56 @@ h1 {
 
 /* ***************************  стили about-us ***************************** */
 
+.about-us {
+  display: flex;
+  min-height: 536px;
+}
+
+.about-us p {
+  margin: 0;
+  margin-top: 5px;
+  margin-bottom: 18px;
+}
+
+.about-us-item {
+  margin-top: 82px;
+}
+
+.about-us-block {
+  display: flex;
+  flex-direction: column;
+  max-width: 520px;
+}
+
 .transport-list{
   font-size: 18px;
   line-height: 26px;
+  padding-inline-start: 36px;
+  margin-top: 0;
+  margin-bottom: 22px;
+}
+
+.transport-list__li {
+  position: relative;
+  margin-bottom: 14px;
+}
+
+.transport-list__li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 13px;
+  left: -36px; 
+  background-image: url("../img/red-line.png");
+  background-repeat: no-repeat;
+  width: 25px;
+  height: 2px;
+}
+
+.main-address {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .small-map {
@@ -687,8 +737,14 @@ h1 {
   display: block;
   width: 300px;
   height: 158px;
+  margin-top: 14px;
+  margin-bottom: 40px;
 }
 
+.small-map-button {
+  width: 300px;
+  text-align: center;
+}
 
 /* ***************************  стили catalog ***************************** */
 .inner-page {
@@ -973,12 +1029,22 @@ footer {
 /* ***************************  стиль red button ***************************** */
 
 .red-button {
+  display: block;
+  box-sizing: border-box;
   font-size: 14px;
   line-height: 20px;
+  font-family: 'Cuprum-Regular', Tahoma, Arial, sans-serif;
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
   background-color: #ee3643;
+  min-height: 38px;
+  padding-left: 40px;
+  padding-top: 10px;
+  padding-right: 40px;
+  align-self: flex-start;
+  border-radius: 3px;
+  text-align: center;
 }
 
 .red-button:hover {
