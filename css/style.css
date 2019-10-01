@@ -99,6 +99,7 @@ header {
   display: flex;
   flex-direction: column;  
   background-color: #f3f7f9;
+  min-height: 320px;
 }
 
 .top-wrapper {
@@ -116,6 +117,7 @@ header {
 .header-link {
   color: #ffffff;
   text-decoration: none;
+  min-width: 150px;
 }
 
 /* ***************************  стили header top ***************************** */
@@ -124,7 +126,9 @@ header {
   background-color: #ee3643;
   min-width: 220px;
   text-align: center;
-  padding: 9px;
+  line-height: 22px;
+  padding-top: 12px;
+  padding-bottom: 5px;
 }
 
 .logo:hover {
@@ -135,8 +139,11 @@ header {
   background-color: #ba2732;
 }
 
-.form-search__input {
+.form-search {
   position: relative;
+}
+
+.form-search__input {
   border: none;
   background-color: #293449;
   min-width: 270px;
@@ -147,17 +154,23 @@ header {
   line-height: 24px;
 }
 
-.form-search__input::before {
-  display: block;
+.form-search__label {
   position: absolute;
-  content: "";
-  width: 14px;
-  height: 16px;
-  background-image: url("../img/icon-search.svg");
-  background-position: left center;
-  background-repeat: no-repeat;
-  background-color: #293449;
-  background-size: contain;
+  top: 12px;
+  left: 17px;
+  opacity: 0.3;
+}
+
+.form-search__input:hover + .form-search__label {
+  opacity: 1;
+} 
+
+.form-search__input:focus + .form-search__label {
+  opacity: 1;
+}
+
+.form-search__input:focus + .form-search__label path{
+  fill: #ee3643;
 }
 
 .form-search__input::-webkit-input-placeholder {
@@ -185,6 +198,11 @@ header {
 
 .form-search__input:hover + svg path {
   fill: #ffffff;
+}
+
+.form-search__input:focus {
+  background-color: #ffffff;
+  outline: none;
 }
 
 .form-search__input:focus::-webkit-input-placeholder {
@@ -227,10 +245,24 @@ input[type=search]::-webkit-search-results-decoration {
   display: none;
 }
 
-.search-svg {
-  padding-left: 17px;
+.header-link {
+  color: #ffffff;
+  text-decoration: none;
+  min-width: 150px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  box-sizing: border-box;
+}
+
+.header-link svg {
   position: absolute;
   top: 12px;
+  left: 17px;
+}
+
+.top-element {
+  position: relative;
+  padding-left: 45px;
 }
 
 .top-element:hover {
@@ -252,6 +284,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 
 .checkout {
+  padding-left: 21px;
   background-color: #63a63e;
 }
 
@@ -263,23 +296,24 @@ input[type=search]::-webkit-search-results-decoration {
   background-color: #518534;
 }
 
-.form-search__input:focus {
-  background-color: #ffffff;
-  outline: none;
-}
-
-.form-search__input:focus + svg path {
-  fill: #ee3643;
-}
-
 /* ***************************  стили header middle ***************************** */
+
+.middle {
+  display: flex;
+  margin-top: 46px;
+  margin-bottom: 42px;
+}
 
 h1 {
   font-family: 'Cuprum-Italic', sans-serif;
   font-style: italic;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 23px;
   color: #ee3643;
+  margin-left: 53px;
+  margin-top: 0;
+  margin-right: 71px;
+  margin-bottom: 0;
 }
 
 .phone,
@@ -289,27 +323,65 @@ h1 {
 
 .phone {
   display: block;
-
+  box-sizing: border-box;
+  margin-top: 1px;
   font-size: 21px;
   line-height: 30px;
   color: #ee3643;
-
   border: 3px solid #ffffff;
+  padding-top: 5px;
+  padding-left: 71px;
+  min-width: 270px;
+  min-height: 45px;
+  background-image: url("../img/icon-phone.svg");
+  background-repeat: no-repeat;
+  background-position: 13px 10px;
 }
+
+
 
 .address {
   font-size: 14px;
   line-height: 20px;
   color: #32425c;
+  padding: 10px;
+}
+
+.user-entrance {
+  display: flex;
+  align-items: flex-start;
+  margin-left: auto;
+}
+
+.user-door {
+  position: relative;
+  min-width: 121px;
+  padding-left: 48px;
+}
+
+.user-door svg {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+}
+
+.registration {
+  min-width: 150px;
+  padding-left: 25px;
 }
 
 .entrance-link {
+  box-sizing: border-box;
+  display: block;
   font-size: 21px;
   line-height: 30px;
   color: #000000;
   text-decoration: none;
-
   background-color: #ffffff;
+  min-height: 45px;
+  margin-left: 10px;
+  padding-top: 8px;
+  
 }
 .entrance-link:hover {
   color: #ee3643;
@@ -327,13 +399,35 @@ h1 {
   fill: #c5c5c5;
 }
 
+.user-zone {
+  margin-left: auto;
+}
+
 .exit {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
   color: #000000;
   font-size: 21px;
   line-height: 30px;
   text-decoration: none;
-
   background-color: #ffffff;
+  min-width: 300px;
+  min-height: 45px;
+  padding-left: 47px;
+  padding-top: 7px;
+}
+
+.icon-user {
+  position: absolute;
+  left: 13px;
+  top: 13px;
+}
+
+.icon-logout {
+  position: absolute;
+  top: 14px;
+  right: 10px;
 }
 
 .exit:hover g,
@@ -345,8 +439,18 @@ h1 {
   opacity: 0.3;
 }
 
+.user-links {
+  padding-top: 1px;
+  display: flex;
+}
+
+.orders {
+  margin-left: 17px;
+  margin-right: 15px;
+}
+
 .my-links {
-  color: #32425c;;
+  color: #32425c;
 }
 
 .my-links:hover {
@@ -358,17 +462,32 @@ h1 {
   opacity: 0.3;
 }
 
+.point {
+  width: 5px;
+  height: 5px;
+  background-color: #32425c;
+  border-radius: 50%;
+  margin-top: 10px;
+  margin-right: 13px;
+}
+
 /* ***************************  стили header навигация ***************************** */
 
 .main-nav {
+  display: flex;
+  justify-content: space-around;
   font-size: 17px;
   line-height: 24px;
   background-color: #32425c;
+  min-height: 55px;
 }
 
 .redirect {
   color: #ffffff;
   text-decoration: none;
+  flex-grow: 1;
+  text-align: center;
+  padding-top: 15px;
 }
 
 .redirect:hover {
