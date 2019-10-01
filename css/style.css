@@ -474,12 +474,15 @@ h1 {
 /* ***************************  стили header навигация ***************************** */
 
 .main-nav {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-around;
   font-size: 17px;
   line-height: 24px;
   background-color: #32425c;
   min-height: 55px;
+  padding-left: 24px;
+  padding-right: 24px;
 }
 
 .redirect {
