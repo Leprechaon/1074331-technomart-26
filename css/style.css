@@ -492,6 +492,7 @@ h1 {
   text-decoration: none;
   flex-grow: 1;
   text-align: center;
+  padding: 5px;
   padding-top: 15px;
 }
 
@@ -752,42 +753,126 @@ h1 {
   font-family: 'PTSans-Regular', sans-serif;
 }
 
+.breadcrumbs {
+  display: flex;
+  padding-inline-start: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .crumbs {
   color: #000000;
   text-decoration: none;
   text-transform: uppercase;
+  margin-right: 15px;
 }
 
 .catalog-title {
+  min-height: 89px;
+  box-sizing: border-box;
   color: #32425c;
   background-color: #f2f6f8;
+  padding-left: 28px;
+  padding-top: 22px;
 }
 
 /* ***************************  стили left side filter ***************************** */
+.form-section-catalog{
+  display: flex; 
+  margin-top: 20px;
+}
+
+.left-side-filter {
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  margin-right: 20px;
+}
 
 .form-element {
   text-transform: uppercase;
   background-color: #f7f3ec;
+  border-radius: 3px;
+}
+
+.left-side-filter__span {
+  padding-left: 18px;
+  padding-top: 9px;
+  padding-bottom: 10px;
 }
 
 .form-names {
   font-size: 17px;
   font-family: 'PTSans-Bold', sans-serif;
-  line-height: 24px;
+  line-height: 21px;
   text-transform: uppercase;
 }
 
+.price-controls {
+  display: flex;
+}
+
 .price-toggle {
+  box-sizing: border-box;
+  border: none;
   font-size: 17px;
   line-height: 24px;
   text-align: center;
   outline: none;
+  max-width: 95px;
+}
+
+.price-controls__span {
+  padding: 10px;
+  line-height: 18px;
+}
+
+.filter-list {
+  display: flex;
+  flex-direction: column;
+  padding-inline-start: 0;
+  margin-block-start: 0;
+}
+
+.filter-list__li {
+  margin-top: 1px;
+  margin-bottom: 18px;
 }
 
 .filter-list-item {
+  position: relative;
   font-size: 15px;
   line-height: 20px;
   text-transform: uppercase;
+  padding-left: 35px;
+}
+
+.checkbox-item::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 27px;
+  height: 23px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+}
+
+.checkbox-input:checked + .checkbox-item::before {
+  background-image: url(../img/checkbox-on.svg);
+}
+
+.radio-item::before {
+  position: absolute;
+  content: "";
+  display: block;
+  width: 25px;
+  height: 25px;
+  background-image: url(../img/radio-off.svg);
+  background-repeat: no-repeat;
+}
+
+.radio-input:checked + .radio-item::before {
+  background-image: url(../img/radio-on.svg);
 }
 
 .view-button {
@@ -801,6 +886,10 @@ h1 {
 }
 
 /* ***************************  стили right side container ***************************** */
+
+.right-side-container {
+  flex-grow: 1;
+}
 
 .sorting {
   text-transform: uppercase;
@@ -964,18 +1053,56 @@ h1 {
 
 /* ***************************  стили footer ***************************** */
 footer {
+  display: flex;
+  flex-direction: column;
   background-color: #32425c;
 }
 
+.footer-top {
+  display: flex;
+  margin-bottom: 31px;
+}
+
 .footer-logo {
+  box-sizing: border-box;
   background-color: #ee3643;
+  width: 220px;
+  height: 63px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+.footer-navigation {
+  display: flex;
+  margin-left: auto;
+  padding-inline-start: 0px;
+  margin-top: 0px;
+}
+
+.footer-nav1 {
+  align-self: flex-end;
+  margin-bottom: 0px;
 }
 
 .footer-link {
   font-size: 18px;
-  line-height: 26px;
+  line-height: 24px;
   text-decoration: none;
   color: #ffffff;
+}
+
+.footer-nav {
+  margin-left: 60px;
+}
+
+.footer-middle {
+  display: flex;
+  min-height: 100px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
 }
 
 .navigation-2 {
@@ -993,21 +1120,58 @@ footer {
 
 .footer-bottom-wrapper {
   background-color: #293449;
+  min-height: 107px;
 }
 
 .footer-bottom {
-  font-size: 16px;
-  line-height: 24px;
+  display: flex;
+  align-items: flex-start;
+  line-height: 18px;
   color: #ffffff;
+  margin-top: 34px;
+}
+
+.copyright {
+  margin-right: 120px;
+}
+
+.social-buttons {
+  display: flex;
+  margin: 0;
+  margin-right: 116px;
 }
 
 .social-btn {
+  position: relative;
+  display: block;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
   background-color: #212a3a;
+  text-align: center;
+  margin-right: 5px;
+  padding-inline-start: 0;
+}
+
+.vk {
+  padding-top: 13px;
+}
+
+.fb {
+  padding-top: 10px;
+}
+
+.inst {
+  padding-top: 10px;
 }
 
 .social-btn:hover,
 .social-btn:active {
   background-color: #ee3643;
+}
+
+.mail-to {
+  margin-right: 50px;
 }
 
 .coupling {

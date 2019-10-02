@@ -79,19 +79,19 @@
       </nav>
     </header>
     <main class="inner-page">
-      <ul class="list-items center-block">
+      <ul class="list-items center-block breadcrumbs">
         <li><a class="crumbs" href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Домой"></a></li>
-        <li><img src="img/icon-right-small.svg" width="8" height="12" alt="Декор"></li>
+        <li><img class="crumbs" src="img/icon-right-small.svg" width="8" height="12" alt="Декор"></li>
         <li><a class="crumbs" href="catalog.html">Каталог</a></li>
-        <li><img src="img/icon-right-small.svg" width="8" height="12" alt="Декор"></li>
+        <li><img class="crumbs" src="img/icon-right-small.svg" width="8" height="12" alt="Декор"></li>
         <li><a class="crumbs" href="">Инструмент</a></li>
-        <li><img src="img/icon-right-small.svg" width="8" height="12" alt="Декор"></li>
+        <li><img class="crumbs" src="img/icon-right-small.svg" width="8" height="12" alt="Декор"></li>
         <li class="crumbs">Перфораторы</li>
       </ul>
       <h2 class="catalog-title section-title center-block">Перфораторы</h2>
       <div class="form-section-catalog center-block">
         <form class="left-side-filter">
-          <span class="form-element">Фильтр:</span>
+          <span class="form-element left-side-filter__span">Фильтр:</span>
           <h3 class="price form-names">Цена:</h3>
           <div class="form-element">
             <div class="scale">
@@ -102,41 +102,42 @@
             <div class="toggle max-toggle"></div>
           </div>
           <div class="price-controls">
-            <input class="form-element price-toggle" type="text" name="price-min" value="0"><span>—</span>
+            <input class="form-element price-toggle" type="text" name="price-min" value="0">
+            <span class="price-controls__span">—</span>
             <input class="form-element price-toggle" type="text" name="price-max" value="30000">
           </div>
           <h3 class="manufactures form-names">Производители:</h3>
-          <ul class="list-items">
-            <li>
-              <input type="checkbox" id="1">
-              <label class="filter-list-item" for="1">Bosch</label>
+          <ul class="list-items filter-list">
+            <li class="filter-list__li">
+              <input class="checkbox-input" type="checkbox" id="1" hidden checked>
+              <label class="filter-list-item checkbox-item" for="1">Bosch</label>
             </li>
-            <li>
-              <input type="checkbox" id="2">
-              <label class="filter-list-item" for="2">Интерскол</label>
+            <li class="filter-list__li">
+              <input class="checkbox-input" type="checkbox" id="2" hidden>
+              <label class="filter-list-item checkbox-item" for="2">Интерскол</label>
             </li>
-            <li>
-              <input type="checkbox" id="3">
-              <label class="filter-list-item" for="3">Makita</label>
+            <li class="filter-list__li">
+              <input class="checkbox-input" type="checkbox" id="3" hidden checked>
+              <label class="filter-list-item checkbox-item" for="3">Makita</label>
             </li>
-            <li>
-              <input type="checkbox" id="4">
-              <label class="filter-list-item" for="4">Dewalt</label>
+            <li class="filter-list__li">
+              <input class="checkbox-input" type="checkbox" id="4" hidden>
+              <label class="filter-list-item checkbox-item" for="4">Dewalt</label>
             </li>
-            <li>
-              <input type="checkbox" id="5">
-              <label class="filter-list-item" for="5">Hitachi</label>
-            </li>
+            <li class="filter-list__li">
+              <input class="checkbox-input" type="checkbox" id="5" hidden>
+              <label class="filter-list-item checkbox-item" for="5">Hitachi</label>
+            </li class="filter-list__li">
           </ul>
           <h3 class="power-source form-names">Питание:</h3>
-          <ul class="list-items">
-            <li>
-              <input type="radio" name="power-source" id="power-1" checked>
-              <label class="filter-list-item" for="power-1">Аккумуляторные</label>
+          <ul class="list-items filter-list">
+            <li class="filter-list__li">
+              <input class="radio-input" type="radio" name="power-source" id="power-1" checked hidden>
+              <label class="filter-list-item radio-item" for="power-1">Аккумуляторные</label>
             </li>
-            <li>
-              <input type="radio" name="power-source" id="power-2">
-              <label class="filter-list-item" for="power-2">Сетевые</label>
+            <li class="filter-list__li">
+              <input class="radio-input" type="radio" name="power-source" id="power-2" hidden>
+              <label class="filter-list-item radio-item" for="power-2">Сетевые</label>
             </li>
           </ul>
           <button class="view-button" type="submit">Показать</button>
@@ -336,9 +337,9 @@
     <footer>
       <div class="footer-top center-block">
         <a class="footer-logo" href="index.html">
-          <img src="img/logo-technomart-footer.svg" width="220" height="68" alt="Техномарт">
+          <img src="img/logo-technomart-footer.svg" width="138" height="23" alt="Техномарт">
         </a>
-        <ul class="list-items" aria-label="Навигация по сайту">
+        <ul class="list-items footer-navigation footer-nav1" aria-label="Навигация по сайту">
           <li>
             <a class="navigation-1 footer-link footer-nav" href="">Компания</a>
           </li>
@@ -361,7 +362,7 @@
             <a class="footer-link" href="contacts.html" aria-label="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
             <a class="footer-link" href="tel:78125550555" aria-label="Наш телефон: +7 812 555 05 55">+7 (812) 555-05-55</a>
         </div>
-        <ul class="list-items" aria-label="Навигация по сайту">
+        <ul class="list-items footer-navigation" aria-label="Навигация по сайту">
           <li>
             <a class="navigation-2 footer-link footer-nav" href="">Материалы</a>
           </li>
@@ -382,29 +383,29 @@
             © 2010-2016 Компания «Техномарт»<br>
             Все права защищены
           </div>
-          <ul class="list-items">
+          <ul class="list-items social-buttons">
             <li>
-              <a class="vk social-btn" href="#" aria-label="Ссылка на Техномарт во Вконтакте">
-                <img src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
+              <a class="social-btn" href="#" aria-label="Ссылка на Техномарт во Вконтакте">
+                <img class="social-icon vk" src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
               </a>
             </li>
             <li>
-              <a class="fb social-btn" href="#" aria-label="Ссылка на Техномарт в Фейсбуке">
-                <img src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
+              <a class="social-btn" href="#" aria-label="Ссылка на Техномарт в Фейсбуке">
+                <img class="social-icon fb" src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
               </a>
             </li>
             <li>
-              <a class="inst social-btn" href="#" aria-label="Ссылка на Техномарт в Инстаграм">
-                <img src="img/icon-insta.svg" width="21" height="21" alt="Инстаграм">
+              <a class="social-btn" href="#" aria-label="Ссылка на Техномарт в Инстаграм">
+                <img class="social-icon inst" src="img/icon-insta.svg" width="21" height="21" alt="Инстаграм">
               </a>
             </li>
           </ul>
           <div class="mail-to">
-            Обратная связь:
+            Обратная связь:<br>
             <a class="feedback coupling" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
           <div class="credits">
-            Разработано —
+            Разработано —<br>
             <a class="developed coupling" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
           </div>
         </div>
