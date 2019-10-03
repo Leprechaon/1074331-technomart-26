@@ -1058,13 +1058,16 @@ h1 {
   min-height: 35px;
   border-radius: 3px;
   margin-left: 1px;
+  text-align: center;
 }
 
 .to-buy {
+  position: relative;
   margin-top: 43px;
   margin-bottom: 11px;
   color: #ffffff;
   background-color: #63a63e;
+  padding-top: 9px;
 }
 
 .to-buy:hover {
@@ -1073,6 +1076,12 @@ h1 {
 
 .to-buy:active {
   background-color: #518534;
+}
+
+.to-buy svg {
+  position: absolute;
+  left: 14px;
+  top: 11px;
 }
 
 .to-buy circle,
@@ -1088,6 +1097,7 @@ h1 {
 .to-bookmark {
   color: #32425c;
   border: 3px solid #63a63e;
+  padding-top: 6px;
 } 
 
 .to-bookmark:hover {
