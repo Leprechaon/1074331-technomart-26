@@ -542,7 +542,7 @@ h1 {
 .offers {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 33px;
+  margin-bottom: 53px;
 }
 
 .left-offers {
@@ -638,6 +638,7 @@ h1 {
   background-image: url(../img/icon-5.svg);
   background-repeat: no-repeat;
   background-position: 191px 32px;
+  margin-bottom: 0;
 }
 
 .slider {
@@ -842,8 +843,28 @@ h1 {
 }
 
 .services {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  min-height: 522px;
+}
+
+.service-slider {
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 55px;
+}
+
+.service-slider::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(../img/slot.png);
+  background-repeat: repeat;
+  width: 10px;
+  height: 272px;
+  top: -44px;
+  left: 230px;
 }
 
 .service-slide {
@@ -854,14 +875,24 @@ h1 {
 
 .services h2 {
   margin-top: 68px;
+  margin-bottom: 15px;
 }
 
+
+
 .service-toggle {
+  box-sizing: border-box;
   font-size: 21px;
   font-family: 'Cuprum-Bold', Tahoma, Arial, sans-serif;
   font-weight: 700;
   color: #ffffff;
   background-color: #32425c;
+  width: 240px;
+  height: 61px;
+  box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
+  margin-bottom: 1px;
+  padding-left: 36px;
+  padding-top: 17px;
 }
 
 .service-toggle:hover {
@@ -875,12 +906,55 @@ h1 {
 .service-input:checked + .service-toggle {
   color: #32425c;
   background-color: #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
+}
+
+.service-slide__div {
+  position: absolute;
+  display: none;
+  left: 320px;
+  width: 620px;
+  flex-direction: column;
+  top: 0;
+}
+
+.service-input:checked ~ .service-slide__div {
+  display: flex;
+}
+
+.service-slide__div img{
+  position: absolute;
+  right: 0;
+}
+
+.delivery-div img {
+  top: 25px;
+}
+
+.warranty-div img {
+  top: 3px;
+}
+
+.warranty-div h3 {
+  font-style: italic;
+}
+
+.credit-div img {
+  top: 1px;
+}
+
+.credit-div .red-button {
+  margin-top: 13px;
 }
 
 .service-slide__div h3 {
+  font-family: 'Cuprum-Regular', Tahoma, Arial, sans-serif;
   font-size: 36px;
   color: #32425c;
-  line-height: 1.5;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 14px;
+  text-transform: uppercase;
 }
 
 /* ***************************  стили about-us ***************************** */
@@ -926,15 +1000,16 @@ h1 {
 }
 
 .transport-list__li::before {
+  box-sizing: border-box;
   content: "";
   position: absolute;
   display: block;
   top: 13px;
   left: -36px; 
-  background-image: url("../img/red-line.png");
-  background-repeat: no-repeat;
+  border: 1px solid #ee3643;
   width: 25px;
   height: 2px;
+  background-color: #ee3643;
 }
 
 .main-address {
