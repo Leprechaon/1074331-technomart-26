@@ -229,7 +229,7 @@ header {
 }
 
 /* Internet Explorer 10 */
-.form-search__input:focus:-ms-input-placeholder {
+.form-search__input:focus::-ms-input-placeholder {
   color: #000000;
 }
 
@@ -355,8 +355,6 @@ h1 {
   background-position: 13px 10px;
 }
 
-
-
 .address {
   font-size: 14px;
   line-height: 20px;
@@ -440,10 +438,6 @@ h1 {
   padding-top: 7px;
 }
 
-.exit {
-  
-}
-
 .icon-user {
   position: absolute;
   left: 13px;
@@ -520,7 +514,7 @@ h1 {
   flex-grow: 1;
   text-align: center;
   padding: 5px;
-  padding-top: 15px;
+  padding-top: 16px;
 }
 
 .redirect:hover {
@@ -740,34 +734,42 @@ h1 {
 
 .bosch {
   background-image: url(../img/bosch.png);
+  background-position: 46px 52px;
 }
 
 .makita {
   background-image: url(../img/Makita.png);
+  background-position: 47px 49px;
 }
 
 .dewalt {
   background-image: url(../img/DeWALT.png);
+  background-position: 36px 47px;
 }
 
 .interskol {
   background-image: url(../img/interskol.png);
+  background-position:  8px 20px;
 }
 
 .hitachi {
   background-image: url(../img/Hitachi.png);
+  background-position: 27px 57px;
 }
 
 .lg {
   background-image: url(../img/LG.png);
+  background-position: 47px 34px;
 }
 
 .aeg {
   background-image: url(../img/AEG.png);
+  background-position: 34px 22px;
 }
 
 .metabo {
   background-image: url(../img/Metabo.png);
+  background-position: 9px 33px;
 }
 
 /* ***************************  стили services ***************************** */
@@ -1016,11 +1018,16 @@ h1 {
 .checkbox-item::before {
   position: absolute;
   content: "";
-  display: block;
   width: 27px;
   height: 23px;
   background-image: url(../img/checkbox-off.svg);
   background-repeat: no-repeat;
+  left: 0px;
+}
+
+.checkbox-input {
+  width: 0;
+  height: 0;
 }
 
 .checkbox-input:checked + .checkbox-item::before {
@@ -1042,8 +1049,8 @@ h1 {
 .radio-item::before {
   position: absolute;
   content: "";
-  display: block;
   top: -3px;
+  left: 0px;
   width: 25px;
   height: 25px;
   background-image: url(../img/radio-off.svg);
