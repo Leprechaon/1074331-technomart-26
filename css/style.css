@@ -795,6 +795,15 @@ h1 {
   margin-bottom: 20px;
 }
 
+.banner-link:hover {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.banner-link:active {
+  opacity: 0.3;
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 1);
+}
+
 .bosch {
   background-image: url(../img/bosch.png);
   background-position: 46px 52px;
@@ -1318,6 +1327,10 @@ h1 {
   min-height: 318px;
   border: 1px solid #e5e5e5;
   margin-bottom: 20px;
+}
+
+.item:hover {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .item-buttons {
