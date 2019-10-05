@@ -1012,7 +1012,6 @@ h1 {
   line-height: 26px;
   padding-left: 36px;
   margin-top: 0;
-  margin-bottom: 22px;
 }
 
 .transport-list__li {
@@ -1045,12 +1044,16 @@ h1 {
   width: 300px;
   height: 158px;
   margin-top: 14px;
-  margin-bottom: 39px;
 }
 
 .small-map-button {
   width: 300px;
   text-align: center;
+}
+
+.about-us .red-button {
+  margin-top: auto;
+  margin-bottom: 86px;
 }
 
 /* ***************************  стили catalog ***************************** */
