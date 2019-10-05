@@ -787,6 +787,7 @@ h1 {
 }
 
 .banner-link {
+  position: relative;
   width: 218px;
   height: 143px;
   background-position: center center;
@@ -800,46 +801,57 @@ h1 {
 }
 
 .banner-link:active {
-  opacity: 0.3;
-  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 1);
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
 }
 
-.bosch {
+.banner-link:active::after {
+  opacity: 0.3;
+}
+
+.banner-link::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  width: 218px;
+  height: 143px;
+}
+
+.bosch::after {
   background-image: url(../img/bosch.png);
   background-position: 46px 52px;
 }
 
-.makita {
+.makita::after {
   background-image: url(../img/Makita.png);
   background-position: 47px 49px;
 }
 
-.dewalt {
+.dewalt::after {
   background-image: url(../img/DeWALT.png);
   background-position: 36px 47px;
 }
 
-.interskol {
+.interskol::after {
   background-image: url(../img/interskol.png);
   background-position:  8px 20px;
 }
 
-.hitachi {
+.hitachi::after {
   background-image: url(../img/Hitachi.png);
   background-position: 27px 57px;
 }
 
-.lg {
+.lg::after {
   background-image: url(../img/LG.png);
   background-position: 47px 34px;
 }
 
-.aeg {
+.aeg::after {
   background-image: url(../img/AEG.png);
   background-position: 34px 22px;
 }
 
-.metabo {
+.metabo::after {
   background-image: url(../img/Metabo.png);
   background-position: 9px 33px;
 }
