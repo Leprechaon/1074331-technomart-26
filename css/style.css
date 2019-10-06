@@ -542,7 +542,7 @@ h1 {
 .offers {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 33px;
+  margin-bottom: 53px;
 }
 
 .left-offers {
@@ -638,6 +638,7 @@ h1 {
   background-image: url(../img/icon-5.svg);
   background-repeat: no-repeat;
   background-position: 191px 32px;
+  margin-bottom: 0;
 }
 
 .slider {
@@ -645,15 +646,64 @@ h1 {
   position: relative;
   min-width: 620px;
   min-height: 266px;
-  background-color: #8b8e94;
+  background-color: #000000;
+}
+
+.slide {
+  display: none;
 }
 
 .slider__input {
   position: absolute;
 }
 
-.slider__label {
+.input-slide-1:checked + .slide-1, 
+.input-slide-2:checked + .slide-2 {
+  display: block;
+}
+
+.input-slide-1:checked~.slider-label-box .label-slide-1,
+.input-slide-2:checked~.slider-label-box .label-slide-2 {
+  background: #ee3643;
+}
+
+.slider-label-box {
   position: absolute;
+  display: flex;
+  left: 295px;
+  top: 220px;
+}
+
+.slider__label {
+  box-sizing: border-box;
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.slider__label::before {
+  position: absolute;
+  display: block;
+  content: "";
+  background-image: url(../img/icon-left.svg);
+  background-repeat: no-repeat;
+  width: 22px;
+  height: 40px; 
+}
+
+.label-slide-1::before {
+  top: -106px;
+  left: -270px;
+}
+
+.label-slide-2::before {
+  top: -106px;
+  left: 283px;
+  transform: scale(-1,1);
 }
 
 .slide {
@@ -664,13 +714,26 @@ h1 {
 
 .slide h2 {
   font-size: 36px;
+  line-height: 38px;
   font-family: 'Cuprum-Bold', sans-serif;
+  text-transform: uppercase;
   color: #ffffff;
+  margin-left: 24px;
+  margin-top: 15px;
+  margin-bottom: 0px;
 }
 
 .slide p {
   font-size: 18px;
   color: #ffffff;
+  margin-left: 24px;
+  margin-top: 0;
+}
+
+.slide .red-button {
+  max-width: 195px;
+  margin-left: 25px;
+  margin-top: 126px;
 }
 
 .slide-1 {
@@ -724,6 +787,7 @@ h1 {
 }
 
 .banner-link {
+  position: relative;
   width: 218px;
   height: 143px;
   background-position: center center;
@@ -732,42 +796,62 @@ h1 {
   margin-bottom: 20px;
 }
 
-.bosch {
+.banner-link:hover {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
+}
+
+.banner-link:active {
+  box-shadow: 0 4px 10px 0 rgba(41, 52, 73, 0.5);
+}
+
+.banner-link:active::after {
+  opacity: 0.3;
+}
+
+.banner-link::after {
+  position: absolute;
+  content: "";
+  background-repeat: no-repeat;
+  width: 218px;
+  height: 143px;
+}
+
+.bosch::after {
   background-image: url(../img/bosch.png);
   background-position: 46px 52px;
 }
 
-.makita {
+.makita::after {
   background-image: url(../img/Makita.png);
   background-position: 47px 49px;
 }
 
-.dewalt {
+.dewalt::after {
   background-image: url(../img/DeWALT.png);
   background-position: 36px 47px;
 }
 
-.interskol {
+.interskol::after {
   background-image: url(../img/interskol.png);
   background-position:  8px 20px;
 }
 
-.hitachi {
+.hitachi::after {
   background-image: url(../img/Hitachi.png);
   background-position: 27px 57px;
 }
 
-.lg {
+.lg::after {
   background-image: url(../img/LG.png);
   background-position: 47px 34px;
 }
 
-.aeg {
+.aeg::after {
   background-image: url(../img/AEG.png);
   background-position: 34px 22px;
 }
 
-.metabo {
+.metabo::after {
   background-image: url(../img/Metabo.png);
   background-position: 9px 33px;
 }
@@ -780,8 +864,28 @@ h1 {
 }
 
 .services {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  min-height: 522px;
+}
+
+.service-slider {
+  position: relative;
+  margin-bottom: 50px;
+  margin-top: 55px;
+}
+
+.service-slider::before {
+  position: absolute;
+  content: "";
+  display: block;
+  background-image: url(../img/slot.png);
+  background-repeat: repeat;
+  width: 10px;
+  height: 272px;
+  top: -44px;
+  left: 230px;
 }
 
 .service-slide {
@@ -792,14 +896,24 @@ h1 {
 
 .services h2 {
   margin-top: 68px;
+  margin-bottom: 15px;
 }
 
+
+
 .service-toggle {
+  box-sizing: border-box;
   font-size: 21px;
   font-family: 'Cuprum-Bold', Tahoma, Arial, sans-serif;
   font-weight: 700;
   color: #ffffff;
   background-color: #32425c;
+  width: 240px;
+  height: 61px;
+  box-shadow: 0 1px 0 0 #293449, inset 0 1px 0 0 #405069;
+  margin-bottom: 1px;
+  padding-left: 36px;
+  padding-top: 17px;
 }
 
 .service-toggle:hover {
@@ -813,12 +927,51 @@ h1 {
 .service-input:checked + .service-toggle {
   color: #32425c;
   background-color: #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
+}
+
+.service-slide__div {
+  position: absolute;
+  display: none;
+  left: 320px;
+  width: 620px;
+  flex-direction: column;
+  top: 0;
+}
+
+.service-input:checked ~ .service-slide__div {
+  display: flex;
+}
+
+.service-slide__div img{
+  position: absolute;
+  right: 0;
+}
+
+.delivery-div img {
+  top: 25px;
+}
+
+.warranty-div img {
+  top: 3px;
+}
+
+.credit-div img {
+  top: 1px;
+}
+
+.credit-div .red-button {
+  margin-top: 13px;
 }
 
 .service-slide__div h3 {
+  font-family: 'Cuprum-Regular', Tahoma, Arial, sans-serif;
   font-size: 36px;
   color: #32425c;
-  line-height: 1.5;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 14px;
+  text-transform: uppercase;
 }
 
 /* ***************************  стили about-us ***************************** */
@@ -855,7 +1008,6 @@ h1 {
   line-height: 26px;
   padding-left: 36px;
   margin-top: 0;
-  margin-bottom: 22px;
 }
 
 .transport-list__li {
@@ -864,15 +1016,16 @@ h1 {
 }
 
 .transport-list__li::before {
+  box-sizing: border-box;
   content: "";
   position: absolute;
   display: block;
   top: 13px;
   left: -36px; 
-  background-image: url("../img/red-line.png");
-  background-repeat: no-repeat;
+  border: 1px solid #ee3643;
   width: 25px;
   height: 2px;
+  background-color: #ee3643;
 }
 
 .main-address {
@@ -887,12 +1040,16 @@ h1 {
   width: 300px;
   height: 158px;
   margin-top: 14px;
-  margin-bottom: 40px;
 }
 
 .small-map-button {
   width: 300px;
   text-align: center;
+}
+
+.about-us .red-button {
+  margin-top: auto;
+  margin-bottom: 86px;
 }
 
 /* ***************************  стили catalog ***************************** */
@@ -1181,6 +1338,10 @@ h1 {
   min-height: 318px;
   border: 1px solid #e5e5e5;
   margin-bottom: 20px;
+}
+
+.item:hover {
+  box-shadow: 0 10px 25px 0 rgba(41, 52, 73, 0.5);
 }
 
 .item-buttons {

@@ -85,21 +85,21 @@
               </div>
             </div>
             <div class="slider">
-              <input class="slider__input" type="radio" id="slide-1" name="toggle" checked>
-              <input class="slider__input" type="radio" id="slide-2" name="toggle">
-              <label class="slider__label" for="slide-1"></label>
-              <label class="slider__label" for="slide-2"></label>
-              <div class="slides">
-                <div class="slide slide-1">
-                  <h2>Перфораторы</h2>
-                  <p>Настоящие мужские игрушки</p>
-                  <a class="red-button" href="catalog.html" aria-label="Каталог перфораторов">Открыть каталог</a>
-                </div>
-                <div class="slide slide-2">
-                  <h2>Дрели</h2>
-                  <p>Соседям на радость</p>
-                  <a class="red-button" href="" aria-label="Каталог дрелей">Открыть каталог</a>
-                </div>
+              <input class="slider__input input-slide-1" type="radio" id="slide-1" hidden name="toggle" >
+              <div class="slide slide-1">
+                <h2>Перфораторы</h2>
+                <p>Настоящие мужские игрушки</p>
+                <a class="red-button" href="catalog.html" aria-label="Каталог перфораторов">Открыть каталог</a>
+              </div>
+              <input class="slider__input input-slide-2" type="radio" id="slide-2" hidden name="toggle" checked>
+              <div class="slide slide-2">
+                <h2>Дрели</h2>
+                <p>Соседям на радость</p>
+                <a class="red-button" href="" aria-label="Каталог дрелей">Открыть каталог</a>
+              </div>
+              <div class="slider-label-box">
+                <label class="slider__label label-slide-1" for="slide-1"></label>
+                <label class="slider__label label-slide-2" for="slide-2"></label>
               </div>
             </div>
           </div>
@@ -215,42 +215,42 @@
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <div class="service-slider">
             <div class="service-slide">
-              <input class="service-input" type="radio" id="service-1" name="service-toggle" checked>
+              <input class="service-input" type="radio" id="service-1" name="service-toggle" hidden checked>
               <label class="service-toggle" for="service-1">Доставка</label>
-              <div class="service-slide__div">
+              <div class="service-slide__div delivery-div">
                 <h3>Доставка</h3>
+                <img src="img/delivery.png" width="468" height="261" alt="Доставка">
                 <p>Мы с удовольствием доставим ваш товар прямо к<br>
                   вашему подъезду совершенно бесплатно!<br>
                   Ведь мы неплохо заработаем,<br>
                   поднимая его на ваш этаж!
                 </p>
-                <img src="img/delivery.png" width="468" height="261" alt="Доставка">
-              </div>
+                </div>
             </div>
             <div class="service-slide">
-              <input class="service-input" type="radio" id="service-2" name="service-toggle" >
+              <input class="service-input" type="radio" id="service-2" name="service-toggle" hidden>
               <label class="service-toggle" for="service-2">Гарантия</label>
-              <div class="service-slide__div">
+              <div class="service-slide__div warranty-div">
                 <h3>Гарантия</h3>
+                <img src="img/warranty.png" width="389" height="283" alt="Гарантия">
                 <p>Если купленный у нас товар поломается или заискрит,<br>
                   а также в случае пожара, спровоцированного его возгоранием,<br>
                   вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
                   сгоревший товар на новый.<br>
                   Дом уж восстановите как-нибудь сами.
                 </p>
-                <img src="img/warranty.png" width="389" height="283" alt="Гарантия">
               </div>
             </div>
             <div class="service-slide">
-              <input class="service-input" type="radio" id="service-3" name="service-toggle" >
+              <input class="service-input" type="radio" id="service-3" name="service-toggle" hidden>
               <label class="service-toggle" for="service-3">Кредит</label>
-              <div class="service-slide__div">
+              <div class="service-slide__div credit-div">
                 <h3>Кредит</h3>
+                <img src="img/credit.png" width="465" height="285" alt="Кредит">
                 <p>Залезть в долговую яму стало проще!<br>
                   Кредитные консультанты придут вам на помощь.
                 </p>
                 <a class="red-button" href="">Отправить заявку</a>
-                <img src="img/credit.png" width="465" height="285" alt="Кредит">
               </div>
             </div>
           </div>
