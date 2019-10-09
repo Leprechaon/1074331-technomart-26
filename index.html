@@ -74,10 +74,9 @@
         <div class="offers">
           <div class="left-offers">
             <div class="top-left-category">  
-              <div class="category materials new">
+              <div class="category materials new-item">
                 <h2 class="category-title">Материалы</h2>
                 <a class="category-link" href="" aria-label="Каталог материалов">На любой вкус</a>
-                <img class="new-item-img" src="img/new-flag.png" width="60" height="59" alt="Новинка">
               </div>
               <div class="category tools">
                 <h2 class="category-title">Инструмент</h2>
@@ -187,7 +186,6 @@
               <a class="to-bookmark item-btn" href="">В закладки</a>
             </div>
             <img class="item-img" src="img/BFG-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-            <img class="new-item-img" src="img/new-flag.png" width="60" height="59" alt="Новинка">
             <h3 class="item-info">Перфоратор BOSCH<br> BFG 2000</h3>
             <p class="old-price price-list"></p>
             <p class="item-price price-list">12500 р.</p>
@@ -355,31 +353,39 @@
         </div>
       </div>  
     </footer>
-    <section class="write-us" hidden>
+    <section class="modal modal-write-us" hidden>
       <h2 class="visually-hidden">Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
-        <label>
-          <span class="form-names">Ваше имя:</span>
-          <input type="text" name="name" placeholder="Имя Фамилия">
+      <form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+        <label class="write-us__label modal-label-1">
+          <span class="modal-form-names">Ваше имя:</span>
+          <input class="modal-form__input modal-form-items" type="text" name="name" placeholder="Имя Фамилия">
         </label>
-        <label>
-          <span class="form-names">Ваш e-mail:</span>
-          <input type="email" name="email" placeholder="email@example.com">
+        <label class="write-us__label modal-label-2">
+          <span class="modal-form-names">Ваш e-mail:</span>
+          <input class="modal-form__input modal-form-items" type="email" name="email" placeholder="email@example.com">
         </label>
-        <label>
-          <span class="form-names">Текст письма:</span>
-          <textarea name="text" placeholder="В свободной форме"></textarea>
+        <label class="write-us__label modal-label-3">
+          <span class="modal-form-names">Текст письма:</span>
+          <textarea class="modal-form__textarea modal-form-items" name="text" placeholder="В свободной форме"></textarea>
         </label>
         <div class="submit-wrapper">
-          <button class="red-button" type="submit" value="Отправить">
+          <button class="red-button modal-form__button" type="submit" value="Отправить">Отправить</button>
         </div>
-      </form>
-      <button type="button" aria-label="Закрыть"><img src="img/icon-close.svg"></button>
+        </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
     </section>
-    <section class="big-map" hidden>
+    <section class="modal modal-big-map" hidden>
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img src="img/big-map.png" width="" height="" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-      <button type="button" aria-label="Закрыть"><img src="img/icon-close.svg"></button>
+      <img src="img/big-map.png" width="970" height="476" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </section>
+    <section class="modal modal-cart" hidden>
+      <h2 class="modal-title"><span class="modal-cart-img"></span>Товар добавлен в корзину!</h2>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      <div class="pop-up-down">
+        <a href="" class="modal-button red-button">Оформить заказ</a>
+        <button class="modal-button modal-cart__button" type="button">Продолжить покупки</button>
+      </div>
     </section>
   </body>
 </html>
