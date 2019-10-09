@@ -1942,7 +1942,6 @@ footer {
   left: 50%;
   z-index: 11;
 
-  display: flex;
   margin-left: -470px;
 
   background-color: #565656;
