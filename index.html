@@ -40,7 +40,7 @@
       </div>
       <div class="middle center-block">
         <h1>
-          Интернет-магазин<br>
+          Интернет-магазин
           строительных материалов<br>
           и инструментов для ремонта
         </h1>
@@ -83,7 +83,7 @@
                 <a class="category-link" href="" aria-label="Каталог инструментов">На все случаи</a>
               </div>
             </div>
-            <div class="slider">
+            <form class="slider">
               <input class="slider__input input-slide-1" type="radio" id="slide-1" hidden name="toggle" >
               <div class="slide slide-1">
                 <h2>Перфораторы</h2>
@@ -100,7 +100,7 @@
                 <label class="slider__label label-slide-1" for="slide-1"></label>
                 <label class="slider__label label-slide-2" for="slide-2"></label>
               </div>
-            </div>
+            </form>
           </div>
           <div class="right-offers">
             <div class="category technic">
@@ -134,8 +134,8 @@
               </a>
               <a class="to-bookmark item-btn" href="">В закладки</a>
             </div>
-            <img class="item-img" src="img/BFG-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
-            <h3 class="item-info">Перфоратор BOSCH<br> BFG 9000</h3>
+            <img class="item-img" src="img/bfg-9000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 9000">
+            <h3 class="item-info">Перфоратор BOSCH BFG 9000</h3>
             <p class="item-old-price price-list">32500 р.</p>
             <p class="item-price price-list">25500 р.</p>
           </li>
@@ -151,8 +151,8 @@
               </a>
               <a class="to-bookmark item-btn" href="">В закладки</a>
             </div>
-            <img class="item-img" src="img/BFG-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
-            <h3 class="item-info">Перфоратор BOSCH<br> BFG 3000</h3>
+            <img class="item-img" src="img/bfg-3000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 3000">
+            <h3 class="item-info">Перфоратор BOSCH BFG 3000</h3>
             <p class="item-old-price price-list">22500 р.</p>
             <p class="item-price price-list">15500 р.</p>
           </li>
@@ -168,8 +168,8 @@
               </a>
               <a class="to-bookmark item-btn" href="">В закладки</a>
             </div>
-            <img class="item-img" src="img/BFG-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
-            <h3 class="item-info">Перфоратор BOSCH<br> BFG 6000</h3>
+            <img class="item-img" src="img/bfg-6000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 6000">
+            <h3 class="item-info">Перфоратор BOSCH BFG 6000</h3>
             <p class="item-old-price price-list">30500 р.</p>
             <p class="item-price price-list">25500 р.</p>
           </li>
@@ -185,8 +185,8 @@
               </a>
               <a class="to-bookmark item-btn" href="">В закладки</a>
             </div>
-            <img class="item-img" src="img/BFG-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
-            <h3 class="item-info">Перфоратор BOSCH<br> BFG 2000</h3>
+            <img class="item-img" src="img/bfg-2000.jpg" width="218" height="170" alt="Перфоратор BOSCH BFG 2000">
+            <h3 class="item-info">Перфоратор BOSCH BFG 2000</h3>
             <p class="old-price price-list"></p>
             <p class="item-price price-list">12500 р.</p>
           </li>
@@ -209,17 +209,17 @@
       <div class="services-wrapper">
         <section class="services simple-text center-block">
           <h2 class="section-title">Сервисы</h2>
-          <p>Хороший интернет-магазин отличается от плохого не только ценами!<br>
+          <p class="services__p">Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
-          <div class="service-slider">
+          <form class="service-slider">
             <div class="service-slide">
               <input class="service-input" type="radio" id="service-1" name="service-toggle" hidden checked>
               <label class="service-toggle" for="service-1">Доставка</label>
-              <div class="service-slide__div delivery-div">
+              <div class="service-slide__div delivery-div" hidden>
                 <h3>Доставка</h3>
                 <img src="img/delivery.png" width="468" height="261" alt="Доставка">
-                <p>Мы с удовольствием доставим ваш товар прямо к<br>
-                  вашему подъезду совершенно бесплатно!<br>
+                <p>Мы с удовольствием доставим ваш товар прямо<br> 
+                  к вашему подъезду совершенно бесплатно!
                   Ведь мы неплохо заработаем,<br>
                   поднимая его на ваш этаж!
                 </p>
@@ -228,12 +228,12 @@
             <div class="service-slide">
               <input class="service-input" type="radio" id="service-2" name="service-toggle" hidden>
               <label class="service-toggle" for="service-2">Гарантия</label>
-              <div class="service-slide__div warranty-div">
+              <div class="service-slide__div warranty-div" hidden>
                 <h3>Гарантия</h3>
                 <img src="img/warranty.png" width="389" height="283" alt="Гарантия">
                 <p>Если купленный у нас товар поломается или заискрит,<br>
-                  а также в случае пожара, спровоцированного его возгоранием,<br>
-                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                  а также в случае пожара, спровоцированного его возгоранием,
+                  вы всегда можете быть уверены в нашей гарантии. Мы обменяем
                   сгоревший товар на новый.<br>
                   Дом уж восстановите как-нибудь сами.
                 </p>
@@ -242,7 +242,7 @@
             <div class="service-slide">
               <input class="service-input" type="radio" id="service-3" name="service-toggle" hidden>
               <label class="service-toggle" for="service-3">Кредит</label>
-              <div class="service-slide__div credit-div">
+              <div class="service-slide__div credit-div" hidden>
                 <h3>Кредит</h3>
                 <img src="img/credit.png" width="465" height="285" alt="Кредит">
                 <p>Залезть в долговую яму стало проще!<br>
@@ -251,7 +251,7 @@
                 <a class="red-button" href="">Отправить заявку</a>
               </div>
             </div>
-          </div>
+          </form>
         </section>
       </div>
       <section class="about-us simple-text center-block">
@@ -322,7 +322,7 @@
       <div class="footer-bottom-wrapper">
         <div class="footer-bottom center-block">
           <div class="copyright">
-            © 2010-2016 Компания «Техномарт»<br>
+            © 2010-2016 Компания «Техномарт»
             Все права защищены
           </div>
           <ul class="list-items social-buttons">
@@ -343,11 +343,11 @@
             </li>
           </ul>
           <div class="mail-to">
-            Обратная связь:<br>
+            Обратная связь:
             <a class="feedback coupling" href="mail@htmlacademy.ru">mail@htmlacademy.ru</a>
           </div>
           <div class="credits">
-            Разработано —<br>
+            Разработано —
             <a class="developed coupling" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy.ru</a>
           </div>
         </div>
