@@ -1938,17 +1938,20 @@ footer {
 
 .modal-big-map {
   position: fixed;
-  top: 126px;
+  top: 165px;
   left: 50%;
+  z-index: 11;
 
-  margin-left: -485px;
+  display: flex;
+  margin-left: -470px;
 
-  background: none;
+  background-color: #565656;
+  box-shadow: 0 0 16px 8px rgba(47, 42, 43, 0.5)
 }
 
 .modal-big-map .modal-close {
-  top: 24px;
-  right: 23px;
+  top: 9px;
+  right: 9px;
 }
 
 /* ***************************  стиль modal - item-in-cart ***************************** */
