@@ -1,6 +1,10 @@
-var bigMapButton = document.querySelector(".small-map")
-var modalMap = document.querySelector(".modal-big-map")
-var closeModalMap = document.querySelector(".close-modal-map")
+var toBuy = document.querySelectorAll(".to-buy");
+var modalCart = document.querySelector(".modal-cart");
+var closeModalCart = document.querySelector(".close-modal-cart");
+var continueBuying = document.querySelector(".modal-cart__button");
+var bigMapButton = document.querySelector(".small-map");
+var modalMap = document.querySelector(".modal-big-map");
+var closeModalMap = document.querySelector(".close-modal-map");
 var writeUsButton = document.querySelector(".write-us-button");
 var modalWriteUs = document.querySelector(".modal-write-us");
 var closeWriteUs = document.querySelector(".close-write-us");
@@ -11,6 +15,33 @@ var writeUsText = modalWriteUs.querySelector("[name=text]");
 var storageName = "";
 var storageEmail = "";
 var isStorageSupport = true;
+
+for (var i=0; i < toBuy.length; i++) {
+  toBuy[i].addEventListener("click", function (evt) {
+    evt.preventDefault();
+    modalCart.classList.add("modal-show");
+  })
+}
+
+closeModalCart.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalCart.classList.remove("modal-show");
+})
+
+continueBuying.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalCart.classList.remove("modal-show");
+})
+
+bigMapButton.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalMap.classList.add("modal-show");
+})
+
+closeModalMap.addEventListener("click", function (evt) {
+  evt.preventDefault();
+  modalMap.classList.remove("modal-show");
+})
 
 try {
   storageName = localStorage.getItem("name");
@@ -56,16 +87,6 @@ modalWriteUs.addEventListener("submit", function (evt) {
   }
 })
 
-bigMapButton.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modalMap.classList.add("modal-show");
-})
-
-closeModalMap.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  modalMap.classList.remove("modal-show");
-})
-
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
     if (modalWriteUs.classList.contains("modal-show")){
@@ -77,6 +98,9 @@ window.addEventListener("keydown", function (evt) {
       evt.preventDefault();
       modalMap.classList.remove("modal-show");
     }
+    if (modalMap.classList.contains("modal-show")) {
+      evt.preventDefault;
+      modalCart.classList.remove("modal-show");
+    }
   }
 })
-
