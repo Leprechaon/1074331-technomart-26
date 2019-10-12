@@ -1132,14 +1132,18 @@ h1 {
   width: 300px;
   height: 158px;
   margin-top: 14px;
+  padding: 0;
 
   background-color: #8b8e94;
+  border: none;
 }
 
-.small-map-button {
+.about-us .write-us-button {
   width: 300px;
+  padding-top: 0;
+  padding-bottom: 0;
 
-  text-align: center;
+  border: none;
 }
 
 .about-us .red-button {
@@ -1953,6 +1957,11 @@ footer {
   right: 9px;
 }
 
+.modal-image-map {
+  position: absolute;
+  border: none;
+}
+
 /* ***************************  стиль modal - item-in-cart ***************************** */
 
 .modal-cart {
@@ -2099,4 +2108,30 @@ footer {
 
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.modal-show {
+  display: flex;
+  animation-name: jumping;
+  animation-duration: 0.6s;
+}
+
+.modal-error {
+  animation-name: shake;
+  animation-duration: 0.6s;
+}
+
+/* ***************************  стиль animation  ***************************** */
+
+@keyframes jumping {
+  0%   { transform: translateY(-5000px);}
+  70%  { transform: translateY(30px);   }
+  90%  { transform: translateY(-10px);  }
+  100% { transform: translateY(0);      }
+}
+
+@keyframes shake {
+  0%, 100%                {transform: translateX(0);}
+  10%, 30%, 50%, 70%, 90% {transform: translateX(10px);}
+  20%, 40%, 60%, 80%      {transform: translateX(-10px);}
 }

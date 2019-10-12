@@ -271,8 +271,8 @@
           <h2 class="section-title">Контакты</h2>
           <p>Вы можете забрать товар сами,<br>
             заехав в наш офис.</p>
-          <a class="small-map" href=""><img src="img/small-map.png" width="300" height="158" alt="Карта проезда: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
-          <a class="red-button small-map-button" href="">Заблудились? Напишите нам!</a>
+          <button class="small-map"><img src="img/small-map.png" width="300" height="158" alt="Карта проезда: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></button>
+          <button class="red-button write-us-button" href="">Заблудились? Напишите нам!</button>
         </div>
       </section>
     </main>
@@ -372,12 +372,13 @@
           <button class="red-button modal-form__button" type="submit" value="Отправить">Отправить</button>
         </div>
         </form>
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      <button class="modal-close close-write-us" type="button" aria-label="Закрыть"></button>
     </section>
     <section class="modal modal-big-map" hidden>
       <h2 class="visually-hidden">Как до нас добраться</h2>
-      <img src="img/big-map.jpg" width="940" height="446" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
-      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+      <iframe class="modal-image-map" src="https://yandex.ru/map-widget/v1/-/CGwvR-kf" width="940" height="446" frameborder="1" allowfullscreen="true"></iframe>
+      <img  src="img/big-map.jpg" width="940" height="446" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">
+      <button class="modal-close close-modal-map" type="button" aria-label="Закрыть"></button>
     </section>
     <section class="modal modal-cart" hidden>
       <h2 class="modal-title"><span class="modal-cart-img"></span>Товар добавлен в корзину!</h2>
@@ -387,5 +388,6 @@
         <button class="modal-button modal-cart__button" type="button">Продолжить покупки</button>
       </div>
     </section>
+    <script src="./js/script.js"></script>
   </body>
 </html>
