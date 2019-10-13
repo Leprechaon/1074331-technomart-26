@@ -1225,8 +1225,53 @@ h1 {
 }
 
 .form-scale {
+  position: relative;
+
   height: 80px;
   margin-bottom: 9px;
+}
+
+.scale {
+  height: 2px;
+  margin: 30px;
+  margin-top: 39px;
+  
+  background-color: #d7dcde;
+}
+
+.bar {
+  width: 90%;
+  height: 2px;
+
+  background-color: #00ca74;
+}
+
+.toggle {
+  position: absolute;
+  
+  box-sizing: border-box;
+  width: 20px;
+  height: 20px;
+
+  background-color: #b1b1b1;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.toggle:hover {
+  cursor: pointer;
+}
+
+.min-toggle {
+  top: 30px;
+  left: 20px;
+}
+
+.max-toggle {
+  top: 30px;
+  right: 40px;
 }
 
 .price-controls {
