@@ -7,7 +7,7 @@
     <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="top-section">
       <div class="top-wrapper">
         <div class="top center-block">
           <a class="logo" href="index.html"><img src="img/logo-technomart.svg" width="109" height="19" alt="Техномарт"></a>
@@ -19,14 +19,14 @@
               </svg>
             </label>
           </form>
-          <a class="header-link top-element" href="">
+          <a class="header-link top-element top-bookmark" href="">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
               <path fill="#ffffff" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/>
             </svg>
             Закладки:
             <span>0</span>
           </a>
-          <a class="header-link top-element cart-with-items" href="">
+          <a class="header-link top-element top-cart cart-with-items" href="">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
               <circle fill="#ffffff" cx="4.5" cy="13.5" r="1.5"/>
               <circle fill="#ffffff" cx="12.5" cy="13.5" r="1.5"/>
@@ -39,7 +39,7 @@
         </div>
       </div>  
       <div class="middle center-block">
-        <h1>
+        <h1 class="middle-title">
           Интернет-магазин
           строительных материалов<br>
           и инструментов для ремонта
@@ -66,7 +66,7 @@
             </a>
           </div>
           <div class="user-links">
-            <a class="my-links orders" href="">Мои Заказы</a>
+            <a class="my-links orders" href="">Мои заказы</a>
             <span class="point my-links"></span>
             <a class="my-links" href="">Личный кабинет</a>
           </div>
@@ -84,13 +84,10 @@
     </header>
     <main class="inner-page">
       <ul class="list-items center-block breadcrumbs">
-        <li><a class="crumbs" href="index.html"><img src="img/icon-home.svg" width="14" height="12" alt="Домой"></a></li>
-        <li><img class="crumbs" src="img/icon-right-small.svg" width="8" height="12" alt="Декор"></li>
+        <li class="breadcrumbs__li"><a class="crumbs crumbs-home" href="index.html">Главная страница</a></li>
         <li><a class="crumbs" href="catalog.html">Каталог</a></li>
-        <li><img class="crumbs" src="img/icon-right-small.svg" width="8" height="12" alt="Декор"></li>
         <li><a class="crumbs" href="">Инструмент</a></li>
-        <li><img class="crumbs" src="img/icon-right-small.svg" width="8" height="12" alt="Декор"></li>
-        <li class="crumbs">Перфораторы</li>
+        <li><a class="crumbs" href="catalog.html">Перфораторы</a></li>
       </ul>
       <h2 class="catalog-title section-title center-block">Перфораторы</h2>
       <div class="form-section-catalog center-block">
@@ -106,65 +103,79 @@
             <div class="toggle max-toggle"></div>
           </div>
           <div class="price-controls">
-            <input class="form-element price-toggle" type="text" name="price-min" value="0">
+            <label>
+              <input class="form-element price-toggle" type="text" name="price-min" value="0">
+            </label>
             <span class="price-controls__span">—</span>
-            <input class="form-element price-toggle" type="text" name="price-max" value="30000">
+            <label>
+              <input class="form-element price-toggle" type="text" name="price-max" value="30000">
+            </label>
           </div>
           <h3 class="manufactures form-names">Производители:</h3>
           <ul class="list-items filter-list">
             <li class="filter-list__li">
-              <input class="checkbox-input" name="bosch" type="checkbox" id="1" hidden checked>
+              <input class="checkbox-input visually-hidden" name="bosch" type="checkbox" id="1" checked>
               <label class="filter-list-item checkbox-item" for="1">Bosch</label>
             </li>
             <li class="filter-list__li">
-              <input class="checkbox-input" name="interskol" type="checkbox" id="2" hidden>
+              <input class="checkbox-input visually-hidden" name="interskol" type="checkbox" id="2">
               <label class="filter-list-item checkbox-item" for="2">Интерскол</label>
             </li>
             <li class="filter-list__li">
-              <input class="checkbox-input" name="makita" type="checkbox" id="3" hidden checked>
+              <input class="checkbox-input visually-hidden" name="makita" type="checkbox" id="3"checked>
               <label class="filter-list-item checkbox-item" for="3">Makita</label>
             </li>
             <li class="filter-list__li">
-              <input class="checkbox-input" name="dewalt" type="checkbox" id="4" hidden>
+              <input class="checkbox-input visually-hidden" name="dewalt" type="checkbox" id="4">
               <label class="filter-list-item checkbox-item" for="4">Dewalt</label>
             </li>
             <li class="filter-list__li">
-              <input class="checkbox-input" name="hitachi" type="checkbox" id="5" hidden>
+              <input class="checkbox-input visually-hidden" name="hitachi" type="checkbox" id="5">
               <label class="filter-list-item checkbox-item" for="5">Hitachi</label>
             </li>
           </ul>
           <h3 class="power-source form-names">Питание:</h3>
           <ul class="list-items filter-list">
             <li class="filter-list__li">
-              <input class="radio-input" type="radio" value="accumulator" name="power-source" id="power-1" checked hidden>
+              <input class="radio-input visually-hidden" type="radio" value="accumulator" name="power-source" id="power-1" checked>
               <label class="filter-list-item radio-item" for="power-1">Аккумуляторные</label>
             </li>
             <li class="filter-list__li">
-              <input class="radio-input" type="radio" value="withCable" name="power-source" id="power-2" hidden>
+              <input class="radio-input visually-hidden" type="radio" value="withCable" name="power-source" id="power-2">
               <label class="filter-list-item radio-item" for="power-2">Сетевые</label>
             </li>
           </ul>
           <button class="view-button" type="submit">Показать</button>
         </form>
         <section class="right-side-container">
-          <form class="sorting">
+          <div class="sorting">
             <span class="sorting__span">Сортировка:</span>
-            <button class="price sort active-sort">По цене</button>
-            <button class="by-type sort">По типу</button>
-            <button class="by-function sort">По функционалу</button>
-            <div>
-              <button class="grow arrow active-sort">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path fill="#231F20" d="M5.5 0L0 10h11z"/>
-                </svg>
-              </button>
-              <button class="reduce arrow">
-                <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-                  <path fill="#231F20" d="M5.5 10L0 0h11"/>
-                </svg>
-              </button>
-            </div>
-          </form>
+            <ul class="list-items sorting__ul">
+              <li>
+                <a class="by-price sort active-sort" href="">По цене</a>
+              </li>
+              <li>
+                <a class="by-type sort" href="">По типу</a>
+              </li>
+              <li>
+                <a class="by-function sort" href="">По функционалу</a>
+              </li>
+              <li>
+                <a class="grow arrow active-sort" href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="reduce arrow" href="">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                    <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
           <ul class="list-items catalog-list">
             <li class="item">
               <div class="item-buttons">
@@ -335,7 +346,7 @@
           ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.</p>
       </div>
     </main>
-    <footer>
+    <footer class="bottom-section">
       <div class="footer-top center-block">
         <a class="footer-logo" href="index.html">
           <img src="img/logo-technomart-footer.svg" width="138" height="23" alt="Техномарт">
@@ -386,19 +397,13 @@
           </div>
           <ul class="list-items social-buttons">
             <li>
-              <a class="social-btn" href="#" aria-label="Ссылка на Техномарт во Вконтакте">
-                <img class="social-icon vk" src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
-              </a>
+              <a class="social-btn vk" href="#">Ссылка на Техномарт во Вконтакте</a>
             </li>
             <li>
-              <a class="social-btn" href="#" aria-label="Ссылка на Техномарт в Фейсбуке">
-                <img class="social-icon fb" src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
-              </a>
+              <a class="social-btn fb" href="#">Ссылка на Техномарт в Фейсбуке</a>
             </li>
             <li>
-              <a class="social-btn" href="#" aria-label="Ссылка на Техномарт в Инстаграм">
-                <img class="social-icon inst" src="img/icon-insta.svg" width="21" height="21" alt="Инстаграм">
-              </a>
+              <a class="social-btn inst" href="#">Ссылка на Техномарт в Инстаграм</a>
             </li>
           </ul>
           <div class="mail-to">

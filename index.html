@@ -7,7 +7,7 @@
     <link href="css/style-min.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="top-section">
       <div class="top-wrapper">
         <div class="top center-block">
           <a class="logo" href="index.html"><img src="img/logo-technomart.svg" width="109" height="19" alt="Техномарт"></a>
@@ -19,14 +19,14 @@
               </svg>
             </label>
           </form>
-          <a class="header-link top-element" href="">
+          <a class="header-link top-element top-bookmark" href="">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="16" viewBox="0 0 14 16">
               <path fill="#ffffff" d="M14 15c0 .55-.368.741-.818.426l-5.363-3.765c-.45-.315-1.187-.315-1.637 0L.818 15.426C.368 15.741 0 15.55 0 15V1c0-.55.45-1 1-1h12c.55 0 1 .45 1 1v14z"/>
             </svg>
             Закладки: 
             <span>0</span>
           </a>
-          <a class="header-link top-element" href="">
+          <a class="header-link top-element top-cart" href="">
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15">
               <circle fill="#ffffff" cx="4.5" cy="13.5" r="1.5"/>
               <circle fill="#ffffff" cx="12.5" cy="13.5" r="1.5"/>
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="middle center-block">
-        <h1>
+        <h1 class="middle-title">
           Интернет-магазин
           строительных материалов<br>
           и инструментов для ремонта
@@ -195,16 +195,32 @@
           <h2 class="section-title">Популярные производители:</h2>
           <a class="red-button" href="" aria-label="Каталог производителей">Все производители</a>
         </div>
-        <div class="manufactures-banners">
-          <a class="banner-link bosch" href="" aria-label="Каталог товаров BOSCH"></a>
-          <a class="banner-link makita" href="" aria-label="Каталог товаров Makita"></a>
-          <a class="banner-link dewalt" href="" aria-label="Каталог товаров DeWalt"></a>
-          <a class="banner-link interskol" href="" aria-label="Каталог товаров Интерскол"></a>
-          <a class="banner-link hitachi" href="" aria-label="Каталог товаров Hitachi"></a>
-          <a class="banner-link lg" href="" aria-label="Каталог товаров LG"></a>
-          <a class="banner-link aeg" href="" aria-label="Каталог товаров AEG"></a>
-          <a class="banner-link metabo" href="" aria-label="Каталог товаров Metabo"></a>
-        </div>
+        <ul class="manufactures-banners list-items">
+          <li>
+            <a class="banner-link bosch" href="" aria-label="Каталог товаров BOSCH"><img src="./img/bosch.png" width="126" height="37" alt="BOSCH"></a>
+          </li>
+          <li>
+            <a class="banner-link makita" href="" aria-label="Каталог товаров Makita"><img src="./img/makita.png" width="123" height="40" alt="Makita"></a>
+          </li>
+          <li>
+            <a class="banner-link dewalt" href="" aria-label="Каталог товаров DeWalt"><img src="./img/dewalt.png" width="146" height="44" alt="DeWalt"></a>
+          </li>
+          <li>
+            <a class="banner-link interskol" href="" aria-label="Каталог товаров Интерскол"><img src="./img/interskol.png" width="200" height="88" alt="Interskol"></a>
+          </li>
+          <li>
+            <a class="banner-link hitachi" href="" aria-label="Каталог товаров Hitachi"><img src="./img/hitachi.png" width="169" height="31" alt="Hitachi"></a>
+          </li>
+          <li>
+            <a class="banner-link lg" href="" aria-label="Каталог товаров LG"><img src="./img/lg.png" width="121" height="73" alt="LG"></a>
+          </li>
+          <li>
+            <a class="banner-link aeg" href="" aria-label="Каталог товаров AEG"><img src="./img/aeg.png" width="151" height="96" alt="AEG"></a>
+          </li>
+          <li>
+            <a class="banner-link metabo" href="" aria-label="Каталог товаров Metabo"><img src="./img/metabo.png" width="204" height="69" alt="Metabo"></a>
+          </li>
+        </ul>
       </section>
       <div class="services-wrapper">
         <section class="services simple-text center-block">
@@ -212,25 +228,25 @@
           <p class="services__p">Хороший интернет-магазин отличается от плохого не только ценами!
             Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
           <form class="service-slider">
+            <input class="service-input" type="radio" id="service-1" name="service-toggle" hidden checked>
+            <input class="service-input" type="radio" id="service-2" name="service-toggle" hidden>
+            <input class="service-input" type="radio" id="service-3" name="service-toggle" hidden>
+            <div class="service-label">
+              <label class="service-toggle service-1" for="service-1">Доставка</label>
+              <label class="service-toggle service-2" for="service-2">Гарантия</label>
+              <label class="service-toggle service-3" for="service-3">Кредит</label>
+            </div>
             <div class="service-slide">
-              <input class="service-input" type="radio" id="service-1" name="service-toggle" hidden checked>
-              <label class="service-toggle" for="service-1">Доставка</label>
               <div class="service-slide__div delivery-div" hidden>
                 <h3>Доставка</h3>
-                <img src="img/delivery.png" width="468" height="261" alt="Доставка">
-                <p>Мы с удовольствием доставим ваш товар прямо<br> 
+                <p>Мы с удовольствием доставим ваш товар прямо
                   к вашему подъезду совершенно бесплатно!
                   Ведь мы неплохо заработаем,<br>
                   поднимая его на ваш этаж!
                 </p>
                 </div>
-            </div>
-            <div class="service-slide">
-              <input class="service-input" type="radio" id="service-2" name="service-toggle" hidden>
-              <label class="service-toggle" for="service-2">Гарантия</label>
               <div class="service-slide__div warranty-div" hidden>
                 <h3>Гарантия</h3>
-                <img src="img/warranty.png" width="389" height="283" alt="Гарантия">
                 <p>Если купленный у нас товар поломается или заискрит,<br>
                   а также в случае пожара, спровоцированного его возгоранием,
                   вы всегда можете быть уверены в нашей гарантии. Мы обменяем
@@ -238,14 +254,9 @@
                   Дом уж восстановите как-нибудь сами.
                 </p>
               </div>
-            </div>
-            <div class="service-slide">
-              <input class="service-input" type="radio" id="service-3" name="service-toggle" hidden>
-              <label class="service-toggle" for="service-3">Кредит</label>
               <div class="service-slide__div credit-div" hidden>
                 <h3>Кредит</h3>
-                <img src="img/credit.png" width="465" height="285" alt="Кредит">
-                <p>Залезть в долговую яму стало проще!<br>
+                <p>Залезть в долговую яму стало проще!
                   Кредитные консультанты придут вам на помощь.
                 </p>
                 <a class="red-button" href="">Отправить заявку</a>
@@ -258,7 +269,7 @@
         <div class="about-us-block about-us-item">
           <h2 class="section-title">Компания «Техномарт»</h2>
           <p>Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
-          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+          <p class="about-us-block__p">Мы можем доставить ваш товар в самые отдаленные точки России!
             Техномарт работает со многими транспортными компаниями:</p>
           <ul class="transport-list list-items">
             <li class="transport-list__li">Деловые линии</li>
@@ -269,14 +280,14 @@
         </div>
         <div class="main-address about-us-item">
           <h2 class="section-title">Контакты</h2>
-          <p>Вы можете забрать товар сами,<br>
+          <p>Вы можете забрать товар сами,
             заехав в наш офис.</p>
-          <button class="small-map"><img src="img/small-map.png" width="300" height="158" alt="Карта проезда: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></button>
-          <button class="red-button write-us-button">Заблудились? Напишите нам!</button>
+          <a class="small-map" href="https://yandex.ru/maps/-/CGDZqWOD"><img src="img/small-map.png" width="300" height="158" alt="Карта проезда: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8"></a>
+          <a class="red-button write-us-button" href="writeus.html">Заблудились? Напишите нам!</a>
         </div>
       </section>
     </main>
-    <footer>
+    <footer class="bottom-section">
       <div class="footer-top center-block">
         <a class="footer-logo" href="index.html">
           <img src="img/logo-technomart-footer.svg" width="138" height="23" alt="Техномарт">
@@ -304,7 +315,7 @@
             <a class="footer-link" href="contacts.html" aria-label="Наш адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</a>
             <a class="footer-link" href="tel:78125550555" aria-label="Наш телефон: +7 812 555 05 55">+7 (812) 555-05-55</a>
         </div>
-        <ul class="list-items footer-navigation">
+        <ul class="list-items footer-navigation footer-nav2">
           <li>
             <a class="navigation-2 footer-link footer-nav" href="">Материалы</a>
           </li>
@@ -327,19 +338,13 @@
           </div>
           <ul class="list-items social-buttons">
             <li>
-              <a class="social-btn" href="#" aria-label="Ссылка на Техномарт во Вконтакте">
-                <img class="social-icon vk" src="img/icon-vk.svg" width="26" height="15" alt="Вконтакте">
-              </a>
+              <a class="social-btn vk" href="#">Ссылка на Техномарт во Вконтакте</a>
             </li>
             <li>
-              <a class="social-btn" href="#" aria-label="Ссылка на Техномарт в Фейсбуке">
-                <img class="social-icon fb" src="img/icon-fb.svg" width="12" height="22" alt="Фейсбук">
-              </a>
+              <a class="social-btn fb" href="#">Ссылка на Техномарт в Фейсбуке</a>
             </li>
             <li>
-              <a class="social-btn" href="#" aria-label="Ссылка на Техномарт в Инстаграм">
-                <img class="social-icon inst" src="img/icon-insta.svg" width="21" height="21" alt="Инстаграм">
-              </a>
+              <a class="social-btn inst" href="#">Ссылка на Техномарт в Инстаграм</a>
             </li>
           </ul>
           <div class="mail-to">
