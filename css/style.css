@@ -844,12 +844,6 @@ input[type=search]::-webkit-search-results-decoration {
 
 /* ***************************  стили popular-manufactures ***************************** */
 
-.manufactures-banners {
-  display: flex;
-  align-items: flex-end;
-  flex-wrap: wrap;
-}
-
 .manufactures-banners li {
   margin-right: 20px;
   margin-bottom: 20px;
@@ -873,8 +867,6 @@ input[type=search]::-webkit-search-results-decoration {
 
   border: 1px solid #eaeaea;
 }
-
-
 
 .banner-link img {
   position: absolute;
@@ -1020,6 +1012,13 @@ input[type=search]::-webkit-search-results-decoration {
   color: #32425c;
   background-color: #ffffff;
   box-shadow: 0 1px 0 0 #ffffff, inset 0 1px 0 0 #ffffff;
+}
+
+#service-1:focus ~ .service-label .service-1,
+#service-2:focus ~ .service-label .service-2,
+#service-3:focus ~ .service-label .service-3 {
+  outline: dotted 1px;
+  outline: -webkit-focus-ring-color auto 1px;
 }
 
 #service-1:checked ~ .service-slide .delivery-div,
@@ -1352,7 +1351,6 @@ input[type=search]::-webkit-search-results-decoration {
   text-align: center;
   
   border: none;
-  outline: none;
 }
 
 .price-controls__span {
@@ -1378,8 +1376,6 @@ input[type=search]::-webkit-search-results-decoration {
 
   border-top: 1px solid #e5e5e5;
 }
-
-
 
 .filter-list {
   flex-direction: column;
@@ -1424,6 +1420,19 @@ input[type=search]::-webkit-search-results-decoration {
   background-image: url("../img/checkbox-on.svg");
 }
 
+.checkbox-input:focus + .checkbox-item {
+  outline: dotted 1px;
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.checkbox-input:disabled + .checkbox-item {
+  color: rgba(0, 0, 0, 0.4)
+}
+
+.checkbox-input:disabled + .checkbox-item::before {
+  opacity: 0.3;
+}
+
 .power-source {
   position: relative;
   margin-top: 26px;
@@ -1458,6 +1467,19 @@ input[type=search]::-webkit-search-results-decoration {
 
 .radio-input:checked + .radio-item::before {
   background-image: url("../img/radio-on.svg");
+}
+
+.radio-input:focus + .radio-item {
+  outline: dotted 1px;
+  outline: -webkit-focus-ring-color auto 1px;
+}
+
+.radio-input:disabled + .radio-item{
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.radio-input:disabled + .radio-item::before {
+  opacity: 0.3;
 }
 
 .view-button {
@@ -1534,10 +1556,6 @@ input[type=search]::-webkit-search-results-decoration {
   opacity: 1;
 }
 
-.sort:focus {
-  outline: none;
-}
-
 .by-type {
   margin-right: 66px;
 }
@@ -1564,10 +1582,6 @@ input[type=search]::-webkit-search-results-decoration {
 .active-sort path,
 .arrow:active path {
   fill: #ee3643;
-}
-
-.arrow:focus {
-  outline: none;
 }
 
 .grow {
